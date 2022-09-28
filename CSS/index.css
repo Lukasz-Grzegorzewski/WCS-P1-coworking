@@ -4,4 +4,111 @@
     --color3: #023047;
     --color4: #FFB703;
     --color5: #FB8500;
+
+    --fontPrimary: 'Roboto Serif', serif;
+    --fontSecondary: 'Roboto', sans-serif;
+} 
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fontSecondary);
+}
+
+body .title-wrapper {
+    height: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .title-wrapper .title {
+    font-family: var(--fontPrimary);
+    font-size: 36px;
+    letter-spacing: 8px;
+}
+
+body .cards {
+    width: 90%;
+    margin: 0 auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+body .cards .card {
+    min-height: 70vh;
+    background-color: rgba(251, 133, 0, .25);
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .25);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+body .cards .card:nth-of-type(even) {
+    background-color: rgba(255, 183, 3, .4);
+}
+
+body .cards .card .img-container {
+    background-size: cover;
+    margin-top: 8%;
+    width: 85%;
+    border-radius: 50%;
+}
+
+body .cards .card .img-container::after {
+    content: '';
+    padding-bottom: 90%;
+    display: block;
+}
+
+body .cards .card .img-coworking {
+    background-image: url(../Images/index-img/coworking-img.jpeg);
+}
+
+body .cards .card .img-service {
+    background-image: url(../Images/index-img/restauration-img.jpg);
+}
+
+body .cards .card .img-info-pratique {
+    background-image: url(../Images/index-img/bien-etre-img.jpg);
+    background-position: right 50% bottom 35%;
+}
+
+body .cards .card .img-contact {
+    background-image: url(../Images/index-img/hero-img.jpeg);
+}
+
+body .cards .card p {
+    width: 80%;
+    height: 100px;
+    word-spacing: 5px;
+
+    text-align: center;
+}
+
+body .cards .card .btn {
+    border: none;
+
+    background-color: rgb(251, 133, 0);
+    color: white;
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
+    border-radius: 15px;
+
+    width: 80%;
+    height: 30px;
+    margin-bottom: 9%;
+    letter-spacing: 5px;
 }
