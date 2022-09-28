@@ -5,3 +5,100 @@
     --color4: #FFB703;
     --color5: #FB8500;
 }
+
+
+body {
+    background-color: #F0E4DA;
+     padding: 0;
+     margin: 0;
+   }
+  
+ .image {
+     background-color: rgb(255, 255, 255);
+ }
+ 
+   img {
+     margin: 0.5em;
+     height: 4em;
+     z-index: auto;
+   }
+   
+   #toggle {
+     display: none;
+   }
+   
+   /**
+     Le Menu Burger
+   **/
+   .burger {
+     position: absolute;
+     top: 4em;
+     right: 10%;
+     margin-left: -2em;
+     margin-top: -45px;
+     width: 2em;
+     height: 45px;
+     z-index: 5;
+   }
+   
+   .burger div {
+     position: relative;
+     width: 3em;
+     height: 3px;
+     border-radius: 10px;
+     background-color: #000000;
+     margin-top: 8px;
+     transition: all 0.3s ease-in-out;
+   }
+   
+   /**
+   le Style de la barre Navigaion
+   **/
+   .nav {
+     position: fixed;
+     width: 100%;
+     height: 50%;
+     margin-top: 5em;
+     background-color: white;
+     top: -50%; left: 0; right: 0; bottom: 0;
+     overflow: hidden;
+     transition: all 0.3s ease-in-out;
+     transform: scale(0);
+     border-radius: 0% 0% 5% 5%;
+     
+     
+   }
+   
+ /** 
+ Le texte de nav 
+ **/
+   nav {
+     text-align: center;
+     
+   }
+   nav a {
+     text-decoration: none;
+     color: #000000;
+     font-size: 2em;
+     margin-top: 1.25em;
+     transition: color 0.2s ease-in-out;
+     letter-spacing: 1px;
+     border-bottom: solid;
+     display: flex;
+     justify-content: center;
+ 
+ 
+   }
+  
+  
+   /**
+   Animations du menu burger 
+   **/
+   #toggle:checked + .burger .meat {
+   color: #000000;
+   }
+   
+   #toggle:checked + .burger + .nav {
+     top: 0;
+     transform: scale(1);
+   }
