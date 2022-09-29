@@ -43,6 +43,7 @@ body .title-wrapper {
 body .title-wrapper .title {
     font-family: var(--fontPrimary);
     font-size: 36px;
+    
     letter-spacing: 8px;
 }
 
@@ -72,7 +73,6 @@ body .cards .card {
 }
 
 body .cards .lastCard {
-    
     justify-content: space-around;
     min-height: 50vh;
 }
@@ -97,6 +97,7 @@ body .cards .card .img-container {
 body .cards .card .img-container::after {
     content: '';
     padding-bottom: 90%;
+
     display: block;
 }
 
@@ -116,8 +117,8 @@ body .cards .card .img-bienEtre {
 body .cards .card p { 
     width: 80%;
     height: 100px;
-    word-spacing: 5px;
 
+    word-spacing: 5px;
     text-align: center;
 }
 
@@ -184,8 +185,6 @@ body .cards .card .btn a {
         
         display: flex;
         flex-direction: column;
-   
-
         gap: 150px;
     }
     
@@ -194,10 +193,8 @@ body .cards .card .btn a {
 
         min-height: 30vh;
         height: 250px;
-
-        
-
         width: 60%;
+
         display: flex;
         flex-direction: column;
         align-items: center;
