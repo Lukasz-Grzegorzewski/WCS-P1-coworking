@@ -21,7 +21,7 @@ form {
 
 h1 {
     font-weight: 50;
-    margin-top: 30%;
+    margin-top: 0 auto;
     text-align: center;
 }
 
@@ -52,4 +52,124 @@ input {
     width: 100%;
     margin-left: 0px;
     margin-top: 10px;
+}
+
+/* @media screen and (min-width:600px) {
+    :root {
+        --color1: #8ECAE6;
+        --color2: #219ebc;
+        --color3: #023047;
+        --color4: #FFB703;
+        --color5: #FB8500;
+        --color6: #F0E4DA;
+    }
+
+    body {
+        font-family: 'Roboto';
+        background-color: var(--color6);
+    }
+
+    form {
+        background-color: var(--color);
+        font-family: 'Roboto';
+        width: 50%;
+        top: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        gap: 2px;
+
+    }
+
+    h1 {
+        font-weight: 50;
+        margin-top: 30%;
+        text-align: center;
+    }
+
+    input {
+        border: none;
+        outline: none
+    }
+
+    #message {
+        border: none;
+        outline: none;
+    }
+
+    #Envoyer {
+        font-family: 'Roboto';
+        color: white;
+        border: 1px solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px #eee;
+        text-shadow: none;
+        background-color: var(--color5);
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+
+}*/
+
+
+@media screen and (min-width:600px) {
+
+    :root {
+        --color1: #8ECAE6;
+        --color2: #219ebc;
+        --color3: #023047;
+        --color4: #FFB703;
+        --color5: #FB8500;
+        --color6: #F0E4DA;
+    }
+
+    body {
+        align-items: center;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    form {
+        background-color: rgba(251, 133, 0, 0.3);
+        border-radius: 15px;
+        height: auto;
+        padding: 20px;
+        width: 450px;
+        box-shadow: 5px 5px 10px grey;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    h1 {
+        color: var(--color5);
+        font-weight: 50;
+        /* position: relative;
+        bottom: 95px;
+        left: 35px;*/
+    }
+
+    #Envoyer {
+        width: 200px;
+        margin-left: 210px;
+        position: relative;
+        top: 130px;
+        left: 65px;
+        border: 0 solid #eee;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px rgb(186, 186, 186);
+        text-shadow: none;
+        font-family: 'Roboto';
+        color: white;
+        background-color: var(--color5);
+    }
+
+    label {
+        margin: 5px;
+    }
 }
