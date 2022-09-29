@@ -14,7 +14,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
+    margin: 50px auto;
     gap: 2px;
 
 }
@@ -136,7 +136,7 @@ input {
     form {
         background-color: rgba(251, 133, 0, 0.3);
         border-radius: 15px;
-        height: auto;
+        height: 400px;
         padding: 20px;
         width: 450px;
         box-shadow: 5px 5px 10px grey;
@@ -144,6 +144,7 @@ input {
         flex-direction: column;
         justify-content: center;
         gap: 5px;
+
     }
 
     h1 {
@@ -158,8 +159,8 @@ input {
         width: 200px;
         margin-left: 210px;
         position: relative;
-        top: 130px;
-        left: 65px;
+        top: 30px;
+        left: 63px;
         border: 0 solid #eee;
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgb(186, 186, 186);
