@@ -65,7 +65,6 @@ body .cards .card {
 
 body .cards .lastCard {
     justify-content: space-around;
-    min-height: 50vh;
 }
 
 body .cards .card h2 {
@@ -107,7 +106,8 @@ body .cards .card .img-bienEtre {
 
 body .cards .card p { 
     width: 80%;
-    height: 100px;
+    min-height: 100px;
+    margin-bottom: 20px;
 
     word-spacing: 5px;
     text-align: center;
@@ -183,7 +183,6 @@ body .cards .card .btn a {
         position: relative;
 
         min-height: 30vh;
-        height: 250px;
         width: 60%;
 
         display: flex;
@@ -205,9 +204,9 @@ body .cards .card .btn a {
     }
 
     body .cards .lastCard {
-        height: 40vh;
+        min-height: 40vh;
         width: 90%;
-        gap: 20px;
+        gap: 10px;
     }
     
     body .cards .card .img-container {
@@ -238,6 +237,10 @@ body .cards .card .btn a {
 
     body .cards .card p { 
         text-align: left;
+    }
+
+    body .cards .lastCard p { 
+        margin-bottom: 20px;
     }
     
     body .cards .card .btn {
