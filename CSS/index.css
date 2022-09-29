@@ -223,21 +223,26 @@ body .cards .card .btn a {
     
     body .cards .card .img-container {
         position: absolute;
-        background-size: cover;
-
         top: calc(50% - 150px);
-
         width: 300px;
         border-radius: 50%;
-    
+
+        
     }
 
     body .cards .card:nth-of-type(odd) .img-container {
         left: -200px;
+
+        outline: 10px solid rgba(251, 133, 0, .75);
+        outline-offset: -10px;
     }
 
     body .cards .card:nth-of-type(even) .img-container {
         right: -200px;
+        
+        outline: 10px solid rgba(255, 183, 3, .75);
+        outline-offset: -10px;
+        
     }
     
     body .cards .lastCard { 
