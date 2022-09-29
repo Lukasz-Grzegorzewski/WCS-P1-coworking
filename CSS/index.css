@@ -5,18 +5,30 @@
     --color4: #FFB703;
     --color5: #FB8500;
 
+
+
+    --backgroundColor: rgb(240, 228, 218);
+
+    --cardOddBackground: rgba(251, 133, 0, .25);
+    --cardEvenBackground: rgba(255, 183, 3, .4);
+    --buttonBackgroundColor: rgb(251, 133, 0);
+
     --fontPrimary: 'Roboto Serif', serif;
     --fontSecondary: 'Roboto', sans-serif;
 } 
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body .desktop-title-wrapper, body .desktop-img-header {
+    display: none;
+}
+
+
 body {
+    background-color: var(--backgroundColor);
     font-family: var(--fontSecondary);
 }
 
@@ -35,8 +47,9 @@ body .title-wrapper .title {
 }
 
 body .cards {
-    width: 90%;
-    margin: 0 auto 50px;
+    width: 100%;
+    margin-bottom: 100px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,8 +58,10 @@ body .cards {
 }
 
 body .cards .card {
+    width: 90%;
     min-height: 70vh;
-    background-color: rgba(251, 133, 0, .25);
+
+    background-color: var(--cardOddBackground);
     box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .25);
     border-radius: 20px;
 
@@ -56,15 +71,27 @@ body .cards .card {
     gap: 30px;
 }
 
+body .cards .lastCard {
+    
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+body .cards .card h2 {
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+
 body .cards .card:nth-of-type(even) {
-    background-color: rgba(255, 183, 3, .4);
+    background-color: var(--cardEvenBackground);
 }
 
 body .cards .card .img-container {
-    background-size: cover;
-    margin-top: 8%;
+    margin-top: 2%;
     width: 85%;
     border-radius: 50%;
+
+    background-size: cover;
 }
 
 body .cards .card .img-container::after {
@@ -77,20 +104,16 @@ body .cards .card .img-coworking {
     background-image: url(../Images/index-img/coworking-img.jpeg);
 }
 
-body .cards .card .img-service {
+body .cards .card .img-restauration {
     background-image: url(../Images/index-img/restauration-img.jpg);
 }
 
-body .cards .card .img-info-pratique {
+body .cards .card .img-bienEtre {
     background-image: url(../Images/index-img/bien-etre-img.jpg);
     background-position: right 50% bottom 35%;
 }
 
-body .cards .card .img-contact {
-    background-image: url(../Images/index-img/hero-img.jpeg);
-}
-
-body .cards .card p {
+body .cards .card p { 
     width: 80%;
     height: 100px;
     word-spacing: 5px;
@@ -101,8 +124,7 @@ body .cards .card p {
 body .cards .card .btn {
     border: none;
 
-    background-color: rgb(251, 133, 0);
-    color: white;
+    background-color: var(--buttonBackgroundColor);
 
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
     border-radius: 15px;
@@ -110,5 +132,143 @@ body .cards .card .btn {
     width: 80%;
     height: 30px;
     margin-bottom: 9%;
-    letter-spacing: 5px;
+}
+
+body .cards .card .btn a {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 8px;
+}
+
+/*=========================================== MEDIA Q /*===========================================*/
+@media screen and (min-width: 930px) {
+
+    body .title-wrapper {
+        display: none;
+    }
+
+    body .cards .lastCard .img-contact {
+        display: none;
+    }
+    
+    body .desktop-img-header {
+        background-image: url(../Images/index-img/hero-img.jpeg);
+        background-size: cover;
+        background-position: right 50% bottom 35%;
+
+        display: block;
+        height: 40vh;
+    }
+    
+    body .desktop-title-wrapper {
+        width: 90%;
+        margin: 50px auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+    }
+
+    body .desktop-title-wrapper .img-owners-wrapper {
+
+        display: flex;
+    }
+
+    body .desktop-title-wrapper .img-owners-wrapper img {
+        width: 100px;
+    }
+
+    
+    body .cards {
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+   
+
+        gap: 150px;
+    }
+    
+    body .cards .card {
+        position: relative;
+
+        min-height: 30vh;
+        height: 250px;
+
+        
+
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    body .cards .card-withoutImage:nth-of-type(odd) {
+        align-self: flex-end;
+        margin-right: 100px;
+        padding-left: 100px;
+    }
+
+    body .cards .card-withoutImage:nth-of-type(even) {
+        align-self: flex-start;
+        margin-left: 100px;
+        padding-right: 100px;
+    }
+
+    body .cards .lastCard {
+        height: 40vh;
+        width: 90%;
+    }
+    
+    body .cards .card .img-container {
+        position: absolute;
+        background-size: cover;
+
+        top: calc(50% - 150px);
+
+        width: 300px;
+        border-radius: 50%;
+    
+    }
+
+    body .cards .card:nth-of-type(odd) .img-container {
+        left: -200px;
+    }
+
+    body .cards .card:nth-of-type(even) .img-container {
+        right: -200px;
+    }
+    
+    body .cards .lastCard { 
+        text-align: center;
+    }
+
+    body .cards .card p { 
+        text-align: left;
+    }
+    
+    body .cards .card .btn {
+        position: absolute;
+        margin: 0;
+
+        height: 20px;
+        width: 250px;
+
+        bottom: -10px;
+    }
+
+    body .cards .card-withoutImage:nth-of-type(odd) .btn {
+        right: 70px;
+    }
+
+    body .cards .card-withoutImage:nth-of-type(even) .btn {
+        left: 70px;
+    }
+
+    body .cards .lastCard .btn {
+        right: 70px;
+    }
+
+
 }
