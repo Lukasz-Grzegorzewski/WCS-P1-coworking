@@ -73,7 +73,7 @@ body .cards .card {
 
 body .cards .lastCard {
     
-    justify-content: space-between;
+    justify-content: space-around;
     min-height: 50vh;
 }
 
@@ -141,7 +141,7 @@ body .cards .card .btn a {
 }
 
 /*=========================================== MEDIA Q /*===========================================*/
-@media screen and (min-width: 930px) {
+@media screen and (min-width: 770px) {
 
     body .title-wrapper {
         display: none;
@@ -204,13 +204,13 @@ body .cards .card .btn a {
         gap: 30px;
     }
 
-    body .cards .card-withoutImage:nth-of-type(odd) {
+    body .cards .card-withImage:nth-of-type(odd) {
         align-self: flex-end;
         margin-right: 100px;
         padding-left: 100px;
     }
 
-    body .cards .card-withoutImage:nth-of-type(even) {
+    body .cards .card-withImage:nth-of-type(even) {
         align-self: flex-start;
         margin-left: 100px;
         padding-right: 100px;
@@ -219,6 +219,7 @@ body .cards .card .btn a {
     body .cards .lastCard {
         height: 40vh;
         width: 90%;
+        gap: 20px;
     }
     
     body .cards .card .img-container {
@@ -226,8 +227,6 @@ body .cards .card .btn a {
         top: calc(50% - 150px);
         width: 300px;
         border-radius: 50%;
-
-        
     }
 
     body .cards .card:nth-of-type(odd) .img-container {
@@ -263,11 +262,11 @@ body .cards .card .btn a {
         bottom: -10px;
     }
 
-    body .cards .card-withoutImage:nth-of-type(odd) .btn {
+    body .cards .card-withImage:nth-of-type(odd) .btn {
         right: 70px;
     }
 
-    body .cards .card-withoutImage:nth-of-type(even) .btn {
+    body .cards .card-withImage:nth-of-type(even) .btn {
         left: 70px;
     }
 
