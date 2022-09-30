@@ -1,0 +1,165 @@
+:root {
+    --color1: #8ECAE6;
+    --color2: #219ebc;
+    --color3: #023047;
+    --color4: #FFB703;
+    --color5: #FB8500;
+    --color6: #F0E4DA;
+    --roboto-serif: 'Roboto Serif', serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: rgba(142, 202, 230, 0.2);
+    font-family: 'Roboto', sans-serif;
+    min-width: 360px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid red;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 20vh;
+}
+
+h1 {
+    font-family: var(--roboto-serif);
+    font-weight: 100;
+}
+
+.bureauind-container {
+    display: flex;
+    width: 90%;
+}
+
+
+.bureauindiv-img {
+    background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
+    background-size: cover;
+    border-radius: 20px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.reunion-container {
+    display: flex;
+    width: 90%;
+}
+
+
+.reunion-img {
+    background-image: url(../images/coworking-img/reunion-img.jpeg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    width: 70%;
+    text-align: center;
+    font-weight: 1.5em;
+    margin: 25px 0 25px 0;
+    padding-bottom: 1em;
+    border-bottom: 1px solid black;
+}
+
+.text-content {
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color2);
+}
+
+@media screen and (min-width:700px) {
+
+    .title {
+        display: none;
+    }
+
+    h1 {
+        display: none;
+    }
+
+    .bureauind-container {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+
+    .bureauindiv-img {
+        background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
+        background-size: 110%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #023047;
+        border-radius: 50px;
+        width: 100%%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .reunion-container {
+        display: flex;
+        justify-content: center;
+        width: 90%;
+    }
+
+
+    .reunion-img {
+        background-image: url(../images/coworking-img/reunion-img.jpeg);
+        background-size: 105%;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 3px solid #023047;
+        border-radius: 50px;
+        width: 100%;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    h2 {
+        text-align: start;
+        width: 60%;
+    }
+
+    .text-content {
+        width: 60%;
+    }
+
+
+    button {
+        margin: 6px 0 50px 50%
+    }
