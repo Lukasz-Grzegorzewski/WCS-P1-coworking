@@ -4,7 +4,15 @@ fetch("../pages/header.html")
     })
     .then(data => {
         document.querySelector("header").innerHTML = data;
-    });
+    })
+    .then(() => {
+        const menuBurger = document.querySelector(".menu-burger");
+        const navLinks = document.querySelector(".nav-links")
+    
+        menuBurger.addEventListener("click", () => {
+          navLinks.classList.toggle('menu-burger')
+        })
+      });
 
 fetch("../pages/footer.html")
     .then(response => {

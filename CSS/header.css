@@ -10,11 +10,10 @@
 header {
     height: 6em;
     background-color: rgb(255, 255, 255);
-    
 }
 
 
-.navbar {
+header .navbar {
     position: absolute;
     padding: 30px;
     display: flex;
@@ -25,32 +24,32 @@ header {
     
 }
 
-.navbar a {
+header .navbar a {
     color: black;
     
 }
 
-.navbar .logo{
+header .navbar .logo{
     height: 4.5em;
     margin: -25px;
     padding-top: 0.5em;
 
 }
 
-.navbar .nav-links li {
+header .navbar .nav-links li {
     padding-right: 2em;
     padding-top: 0.5em;
 }
 
-.navbar .nav-links ul {
+header .navbar .nav-links ul {
     display: flex;
 }
 
-.navbar .nav-links ul li {
+header .navbar .nav-links ul li {
     margin: 0 25px;
 }
 
-.navbar .menu-burger{
+header .navbar .menu-burger{
     display: none;
     position: absolute;
     top: 35px;
@@ -58,7 +57,7 @@ header {
     width: 35px;
 }
 
-hr {
+header nav .nav-links ul hr {
     display: none;
 }
 
@@ -67,22 +66,22 @@ hr {
     
 
 
-    .navbar{
+    header .navbar{
         padding: 0;
     }
 
-    .navbar .logo{
+    header .navbar .logo{
         position: absolute;
         top: 30px;
         left: 50px;
     }
     
-    .navbar .menu-burger{
+    header .navbar .menu-burger{
         display: block;
         top: 30px;
     }
 
-    .nav-links{
+    header .nav-links{
         top: 85px;
         left: O;
         position: absolute;
@@ -97,31 +96,31 @@ hr {
         
     }
 
-    .nav-links.mobile-menu{
+    header .nav-links.mobile-menu{
         margin-left: 0;
     }
 
-    .nav-links ul{
+    header .nav-links ul{
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
 
-    .navbar .nav-links ul li {
+    header .navbar .nav-links ul li {
         margin:  10% 0;       
     }
 
     
 
-    .navbar .nav-links li {
+    header .navbar .nav-links li {
         padding-right: 0;
         padding-top: 10%;
         padding-bottom: 10%
     }
 
     
-    hr {
+    header nav .nav-links ul hr {
         display: flex;
         align-items: center;
         width: 200%;

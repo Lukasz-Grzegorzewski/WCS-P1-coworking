@@ -1,12 +1,4 @@
 :root {
-
-    --color1: #8ECAE6;
-    --color2: #219ebc;
-    --color3: #023047;
-    --color4: #FFB703;
-    --color5: #FB8500;
-}
-
     --backgroundColor: rgb(240, 228, 218);
     --cardOddBackground: rgba(251, 133, 0, .25);
     --cardEvenBackground: rgba(255, 183, 3, .4);
