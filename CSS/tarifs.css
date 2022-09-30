@@ -74,12 +74,11 @@ h2 {
     text-align: center;
     border-bottom: 2px solid var(--color3);
     padding-bottom: 0.6em;
-    font-family: var(--roboto-serif);
-    font-weight: 400;
+    font-weight: 1.5em;
 }
 
 
-ul {
+.main-container ul {
     margin: 0px auto;
     padding-left: 0px;
     display: flex;
@@ -89,7 +88,7 @@ ul {
 }
 
 
-li {
+.main-container li {
     list-style: none;
     display: flex;
 }
