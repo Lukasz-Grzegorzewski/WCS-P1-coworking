@@ -5,7 +5,9 @@
     list-style: none;
 }
 
-
+body {
+    background-color: aqua;
+}
 
 header {
     height: 6em;
@@ -99,6 +101,7 @@ hr {
 
     .nav-links.mobile-menu{
         margin-left: 0;
+        
     }
 
     .nav-links ul{
