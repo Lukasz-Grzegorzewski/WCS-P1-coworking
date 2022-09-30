@@ -26,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .title {
@@ -189,7 +190,7 @@ i {
         background-size: cover;
         position: absolute;
         top: 250px;
-        left: 70%;
+        right: 10%;
         width: 300px;
         height: 300px;
         border: 10px solid rgba(255, 183, 3, 0.8);
@@ -199,7 +200,7 @@ i {
     .yellow-container {
         width: 70%;
         background-color: rgba(255, 183, 3, 0.2);
-        height: 220px;
+        height: auto;
         margin: 115px;
         padding-left: 5%;
         box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.25);
@@ -208,11 +209,13 @@ i {
     }
 
     .yellow-container .text-content {
-        width: 75%;
+        width: 50%;
         text-align: start;
+
     }
 
     .yellow-container h2 {
-        width: 65%;
+        width: 45%;
         text-align: start;
+        padding-bottom: 0.5em;
     }
