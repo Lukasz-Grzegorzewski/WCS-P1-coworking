@@ -1,0 +1,211 @@
+:root {
+    --color1: #8ECAE6;
+    --color2: #219ebc;
+    --color3: #023047;
+    --color4: #FFB703;
+    --color5: #FB8500;
+    --color6: #F0E4DA;
+    --roboto-serif: 'Roboto Serif', serif;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(--color6);
+    font-family: 'Roboto', sans-serif;
+    min-width: 360px;
+}
+
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+
+
+h1 {
+    font-family: var(--roboto-serif);
+    font-weight: 100;
+
+}
+
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 25px 0;
+    gap: 50px;
+    width: 90%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, 0.25);
+}
+
+
+.blue {
+    background-color: rgba(33, 158, 188, 0.3);
+}
+
+
+.yellow {
+    background-color: rgba(255, 183, 3, 0.2);
+}
+
+
+h2 {
+    width: 70%;
+    text-align: center;
+    border-bottom: 2px solid var(--color3);
+    padding-bottom: 0.6em;
+    font-weight: 1.5em;
+}
+
+
+.main-container ul {
+    margin: 0px auto;
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6em;
+    width: 90%;
+}
+
+
+.main-container li {
+    list-style: none;
+    display: flex;
+}
+
+
+i {
+    text-align: center;
+    width: 40px;
+    min-width: 40px;
+}
+
+
+.blue i {
+    color: var(--color2);
+}
+
+
+.yellow i {
+    color: var(--color4);
+}
+
+
+button {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.blue-button {
+    background-color: var(--color2);
+}
+
+
+.yellow-button {
+    background-color: var(--color4);
+}
+
+
+.adress {
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+span {
+    padding: 0;
+    margin: 0;
+}
+
+
+strong {
+    padding: 0;
+    margin: 0;
+}
+
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+
+iframe {
+    width: 90%;
+}
+
+
+
+
+@media screen and (min-width:700px) {
+
+    .calc-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .calculator-img {
+        background-image: url(../images/tarif-img/calculatrice-img.jpg);
+        background-size: cover;
+        border: 3px solid #023047;
+        border-radius: 50px;
+        width: 80%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    h1 {
+        display: none,
+    }
+
+
+    .main-container {
+        flex-direction: row;
+        justify-content: center;
+        height: auto;
+    }
+
+
+    .container {
+        width: 30%;
+        min-width: 300px;
+        justify-content: space-between;
+        height: 70vh;
+        padding: 35px 0 35px 0;
+    }
+
+
+}
