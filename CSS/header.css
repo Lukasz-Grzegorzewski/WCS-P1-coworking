@@ -5,10 +5,10 @@
     list-style: none;
 }
 
-body {
-    background-color: rgb(255, 255, 0);
-}
 
+body{
+    background-color: aqua;
+}
 header {
     height: 6em;
     background-color: rgb(255, 255, 255);
@@ -29,14 +29,20 @@ header {
 
 .navbar a {
     color: black;
+    
 }
 
 .navbar .logo{
-    height: 3em;
-    margin: -30px;
+    height: 4.5em;
+    margin: -25px;
+    padding-top: 0.5em;
 
 }
 
+.navbar .nav-links li {
+    padding-right: 2em;
+    padding-top: 0.5em;
+}
 
 .navbar .nav-links ul {
     display: flex;
@@ -69,7 +75,7 @@ hr {
 
     .navbar .logo{
         position: absolute;
-        top: 50px;
+        top: 30px;
         left: 50px;
     }
     
@@ -82,7 +88,7 @@ hr {
         top: 85px;
         left: O;
         position: absolute;
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(203, 28, 28);
         width: 100%;
         height: 50vh;
         display: flex;
@@ -105,14 +111,22 @@ hr {
     }
 
     .navbar .nav-links ul li {
-        margin: 25px 0;
+        margin:  10% 0;       
+    }
+
+    
+
+    .navbar .nav-links li {
+        padding-right: 0;
+        padding-top: 10%;
+        padding-bottom: 10%
     }
 
     
     hr {
         display: flex;
+        align-items: center;
         width: 200%;
-        margin-top: 1em;
         border: 1px solid;
         color: rgba(0, 0, 0, 0.533);
     }
