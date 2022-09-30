@@ -88,6 +88,13 @@ h2 {
     align-items: center;
 }
 
+.bien-etre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 ul {
     margin: 0px auto 25px auto;
     padding-left: 0px;
@@ -166,6 +173,10 @@ i {
         width: 70%;
     }
 
+    .bien-etre h2 {
+        width: 60%;
+        text-align: center;
+    }
 
     ul {
         width: 70%;
