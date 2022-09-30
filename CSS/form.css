@@ -134,9 +134,11 @@ input {
     }
 
     form {
+        margin-top: 200px;
+        margin-bottom: 200px;
         background-color: rgba(251, 133, 0, 0.3);
         border-radius: 15px;
-        height: 400px;
+        height: 350px;
         padding: 20px;
         width: 450px;
         box-shadow: 5px 5px 10px grey;
