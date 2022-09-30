@@ -7,6 +7,12 @@
     --color6: #F0E4DA;
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 form {
     font-family: 'Roboto';
     width: 50%;
@@ -54,66 +60,6 @@ input {
     margin-top: 10px;
 }
 
-/* @media screen and (min-width:600px) {
-    :root {
-        --color1: #8ECAE6;
-        --color2: #219ebc;
-        --color3: #023047;
-        --color4: #FFB703;
-        --color5: #FB8500;
-        --color6: #F0E4DA;
-    }
-
-    body {
-        font-family: 'Roboto';
-        background-color: var(--color6);
-    }
-
-    form {
-        background-color: var(--color);
-        font-family: 'Roboto';
-        width: 50%;
-        top: 50%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-        gap: 2px;
-
-    }
-
-    h1 {
-        font-weight: 50;
-        margin-top: 30%;
-        text-align: center;
-    }
-
-    input {
-        border: none;
-        outline: none
-    }
-
-    #message {
-        border: none;
-        outline: none;
-    }
-
-    #Envoyer {
-        font-family: 'Roboto';
-        color: white;
-        border: 1px solid #eee;
-        border-radius: 20px;
-        box-shadow: 5px 5px 5px #eee;
-        text-shadow: none;
-        background-color: var(--color5);
-        width: 100%;
-        margin-left: 0px;
-        margin-top: 10px;
-    }
-
-}*/
-
-
 @media screen and (min-width:600px) {
 
     :root {
@@ -126,11 +72,8 @@ input {
     }
 
     body {
-        align-items: center;
         background-color: white;
-        display: flex;
-        justify-content: center;
-        height: 100vh;
+
     }
 
     form {
@@ -140,7 +83,7 @@ input {
         border-radius: 15px;
         height: 350px;
         padding: 20px;
-        width: 450px;
+        width: 60%;
         box-shadow: 5px 5px 10px grey;
         display: flex;
         flex-direction: column;
@@ -152,9 +95,7 @@ input {
     h1 {
         color: var(--color5);
         font-weight: 50;
-        /* position: relative;
-        bottom: 95px;
-        left: 35px;*/
+
     }
 
     #Envoyer {
@@ -162,7 +103,7 @@ input {
         margin-left: 210px;
         position: relative;
         top: 30px;
-        left: 63px;
+        right: 70px;
         border: 0 solid #eee;
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgb(186, 186, 186);
