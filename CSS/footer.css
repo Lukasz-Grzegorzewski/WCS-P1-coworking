@@ -1,0 +1,87 @@
+footer {
+    position: relative;
+    padding: 20px 0;
+    background-color: white;
+    width: 100%;
+
+
+}
+
+footer .followUs {
+
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px
+}
+
+footer .followUs a .fa-facebook {
+    color: #4267B2
+}
+
+footer .followUs a .fa-twitter {
+    color: #1DA1F2;
+}
+
+footer .followUs a .fa-instagram {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+footer .followUs a .fa-youtube {
+    color: #FF0000;
+}
+
+hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+footer .footer-contact {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer .footer-contact .footer-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer .footer-contact .footer-element .title-footer {
+    font-size: .7rem;
+}
+
+footer .footer-contact .footer-element ul {
+    padding-top: 10px;
+}
+
+footer .footer-contact .footer-element ul li {
+    list-style: none;
+    margin: 3px;
+    font-size: 8px;
+}
+
+footer .copyrights {
+    position: absolute;
+    font-size: .5rem;
+
+    bottom: 5px;
+    right: 5px;
+}
+
+
+/*=========================================== MEDIA Q /*===========================================*/
+@media screen and (min-width: 770px) {
+    footer .followUs a {
+        transition: scale ease-in-out 200ms;
+    }
+
+    footer .followUs a:hover {
+        scale: 1.5;
+    }
+}
