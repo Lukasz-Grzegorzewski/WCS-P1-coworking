@@ -5,4 +5,3 @@ const menuBurger = document.querySelector(".menu-burger");
         menuBurger.addEventListener('click',()=>{
         navLinks.classList.toggle("mobile-menu");
         })
-
