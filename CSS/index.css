@@ -15,6 +15,11 @@
     padding: 0;
 }
 
+html {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
 body .desktop-title-wrapper,
 body .desktop-img-header {
     display: none;
@@ -24,21 +29,32 @@ body .desktop-img-header {
 body {
     background-color: var(--backgroundColor);
     font-family: var(--fontSecondary);
+
+    scroll-snap-align: start;
 }
 
 body .title-wrapper {
-    height: 20vh;
+    height: 15vh;
+    padding-bottom: 5px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    scroll-snap-align: start;
+
 }
 
 body .title-wrapper .title {
     font-family: var(--fontPrimary);
-    font-size: 36px;
+    font-size: 24px;
 
+    text-align: center;
     letter-spacing: 8px;
+}
+
+body .title-wrapper .title p {
+    font-size: 14px;
 }
 
 body .cards {
@@ -54,11 +70,14 @@ body .cards {
 
 body .cards .card {
     width: 90%;
-    min-height: 70vh;
+    padding: 8%;
 
     background-color: var(--cardOddBackground);
     box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .25);
     border-radius: 20px;
+
+    scroll-snap-align: start;
+    scroll-margin: 20px;
 
     display: flex;
     flex-direction: column;
@@ -71,47 +90,46 @@ body .cards .lastCard {
 }
 
 body .cards .card h2 {
-    margin-top: 30px;
     letter-spacing: 3px;
+    text-align: center;
 }
 
 body .cards .card:nth-of-type(even) {
     background-color: var(--cardEvenBackground);
 }
 
-body .cards .card .img-container {
-    margin-top: 2%;
-    width: 85%;
-    border-radius: 50%;
+body .cards .card a {
+    width: 100%;
+    pointer-events: none;
+    cursor: default;
+}
 
+body .cards .card a .img-container {
+    width: 100%;
+    border-radius: 50%;
     background-size: cover;
 }
 
-body .cards .card .img-container::after {
+body .cards .card a .img-container::after {
     content: '';
     padding-bottom: 90%;
-
     display: block;
 }
 
-body .cards .card .img-coworking {
+body .cards .card a .img-coworking {
     background-image: url(../Images/index-img/coworking-img.jpeg);
 }
 
-body .cards .card .img-restauration {
+body .cards .card a .img-restauration {
     background-image: url(../Images/index-img/restauration-img.jpg);
 }
 
-body .cards .card .img-bienEtre {
+body .cards .card a .img-bienEtre {
     background-image: url(../Images/index-img/bien-etre-img.jpg);
     background-position: right 50% bottom 35%;
 }
 
 body .cards .card p {
-    width: 80%;
-    min-height: 100px;
-    margin-bottom: 20px;
-
     word-spacing: 5px;
     text-align: center;
 }
@@ -119,18 +137,14 @@ body .cards .card p {
 body .cards .card .btn {
     border: none;
 
+    width: 80%;
+    height: 30px;
+
     background-color: var(--buttonBackgroundColor);
 
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
     border-radius: 15px;
 
-    width: 80%;
-    height: 30px;
-    margin-bottom: 9%;
-}
-
-body .cards .card .btn a {
-    text-decoration: none;
     color: white;
     letter-spacing: 8px;
 }
@@ -153,6 +167,8 @@ body .cards .card .btn a {
 
         display: block;
         height: 40vh;
+
+        scroll-snap-align: start;
     }
 
     body .desktop-title-wrapper {
@@ -162,6 +178,9 @@ body .cards .card .btn a {
         justify-content: center;
         align-items: center;
         gap: 50px;
+
+        scroll-snap-align: start;
+
     }
 
     body .desktop-title-wrapper .img-owners-wrapper {
@@ -184,9 +203,10 @@ body .cards .card .btn a {
 
     body .cards .card {
         position: relative;
-
-        min-height: 30vh;
+        padding-top: 10px;
         width: 60%;
+
+        scroll-margin: 25px;
 
         display: flex;
         flex-direction: column;
@@ -197,53 +217,59 @@ body .cards .card .btn a {
     body .cards .card-withImage:nth-of-type(odd) {
         align-self: flex-end;
         margin-right: 100px;
-        padding-left: 100px;
+        padding-left: 110px;
     }
 
     body .cards .card-withImage:nth-of-type(even) {
         align-self: flex-start;
         margin-left: 100px;
-        padding-right: 100px;
+        padding-right: 110px;
     }
 
     body .cards .lastCard {
-        min-height: 40vh;
         width: 90%;
         gap: 10px;
     }
 
-    body .cards .card .img-container {
+    body .cards .card a .img-container {
         position: absolute;
-        top: calc(50% - 150px);
+        top: calc(50% - 135px);
         width: 300px;
         border-radius: 50%;
+
+        pointer-events: initial;
+        cursor: pointer;
+
+        overflow: hidden;
+
+        transition: scale ease-in-out 300ms;
     }
 
-    body .cards .card:nth-of-type(odd) .img-container {
+    body .cards .card a .img-container:hover {
+        scale: 1.05;
+    }
+
+    body .cards .card:nth-of-type(odd) a .img-container {
         left: -200px;
 
         outline: 10px solid rgba(251, 133, 0, .75);
         outline-offset: -10px;
     }
 
-    body .cards .card:nth-of-type(even) .img-container {
+    body .cards .card:nth-of-type(even) a .img-container {
         right: -200px;
 
         outline: 10px solid rgba(255, 183, 3, .75);
         outline-offset: -10px;
-
     }
 
     body .cards .lastCard {
+        padding-top: 30px;
         text-align: center;
     }
 
     body .cards .card p {
         text-align: left;
-    }
-
-    body .cards .lastCard p {
-        margin-bottom: 20px;
     }
 
     body .cards .card .btn {
@@ -257,6 +283,12 @@ body .cards .card .btn a {
         z-index: 1;
         overflow: hidden;
     }
+
+    body .cards .card .btn:hover {
+        scale: 1.05;
+    }
+
+
 
     body .cards .card-withImage:nth-of-type(odd) .btn {
         right: 70px;
@@ -287,3 +319,4 @@ body .cards .card .btn a {
         transform: scaleX(1);
         transform-origin: left;
     }
+}
