@@ -106,7 +106,7 @@ hr {
     }
 
     .nav-links{
-        transition: all 1.5s ease;
+        transition: all .5s ease;
     }
 
     .nav-links.mobile-menu{
