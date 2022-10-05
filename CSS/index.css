@@ -164,11 +164,6 @@ body {
         overflow-y: none;
         scroll-snap-type: none;
     }
-    
-
-    .title-wrapper {
- 
-    }
 
     .cards .lastCard .img-contact {
         display: none;
@@ -225,7 +220,7 @@ body {
         transition: width ease-in-out .5s;
     }
 
-    .cards .card:hover {
+    .cards .card.card-effect {
         width: 60%;
     }
 
