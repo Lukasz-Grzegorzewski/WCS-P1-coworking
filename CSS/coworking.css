@@ -95,7 +95,16 @@ button {
     color: white;
     font-family: 'Roboto', sans-serif;
     background-color: var(--color2);
+    z-index: 1;
+    overflow: hidden;
+
 }
+
+.blue-button {
+    position: relative;
+}
+
+
 
 @media screen and (min-width:700px) {
 
@@ -160,5 +169,28 @@ button {
 
 
     button {
-        margin: 6px 0 50px 50%
+        margin: 6px 0 50px 50%;
+    }
+
+
+    button::before {
+        background-color: var(--color3);
+        content: '';
+        padding: 5px 10px;
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 20px;
+
+
+    }
+
+    button:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+
+
     }
