@@ -86,12 +86,15 @@ body {
 
 .cards .lastCard {
     justify-content: space-around;
+    scroll-snap-align: none;
+    scroll-margin: 0;
 }
 
 .cards .card h2 {
     letter-spacing: 3px;
     text-align: center;
 }
+
 
 .cards .card:nth-of-type(even) {
     background-color: var(--cardEvenBackground);
@@ -128,10 +131,16 @@ body {
     background-position: right 50% bottom 35%;
 }
 
-.cards .card p {
+.cards .card .p-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cards .card .p-wrapper p {
     word-spacing: 5px;
     text-align: center;
 }
+
 
 .cards .card .btn {
     border: none;
@@ -150,9 +159,10 @@ body {
 
 /*=========================================== MEDIA Q /*===========================================*/
 @media screen and (min-width: 770px) {
-
-    .title-wrapper {
-        display: none;
+    
+    html {
+        overflow-y: none;
+        scroll-snap-type: none;
     }
 
     .cards .lastCard .img-contact {
@@ -166,8 +176,6 @@ body {
 
         display: block;
         height: 40vh;
-
-        scroll-snap-align: start;
     }
 
     .desktop-title-wrapper {
@@ -178,12 +186,9 @@ body {
         align-items: center;
         gap: 50px;
 
-        scroll-snap-align: start;
-
     }
 
     .desktop-title-wrapper .img-owners-wrapper {
-
         display: flex;
     }
 
@@ -203,14 +208,24 @@ body {
     .cards .card {
         position: relative;
         padding-top: 10px;
-        width: 60%;
-
+        width: 40%;
+        height: 250px;
         scroll-margin: 25px;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+
+        transition: width ease-in-out .5s;
+    }
+
+    .cards .card.card-effect {
+        width: 60%;
+    }
+
+    .cards .card-withImage {
+        padding-bottom: 35px;
     }
 
     .cards .card-withImage:nth-of-type(odd) {
@@ -225,9 +240,17 @@ body {
         padding-right: 110px;
     }
 
+    .cards .card-withImage:nth-child(3) {
+        padding-top: 0;
+    }
+
     .cards .lastCard {
-        width: 90%;
+        width: 60%;
         gap: 10px;
+    }
+
+    .cards .lastCard:hover {
+        width: 90%;
     }
 
     .cards .card a .img-container {
@@ -267,7 +290,7 @@ body {
         text-align: center;
     }
 
-    .cards .card p {
+    .cards .card .p-wrapper p {
         text-align: left;
     }
 
