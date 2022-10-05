@@ -3,6 +3,7 @@
     --cardOddBackground: rgba(251, 133, 0, .25);
     --cardEvenBackground: rgba(255, 183, 3, .4);
     --buttonBackgroundColor: rgb(251, 133, 0);
+    --buttonTransitionColor: #FFB703;
 
     --fontPrimary: 'Roboto Serif', serif;
     --fontSecondary: 'Roboto', sans-serif;
@@ -249,7 +250,7 @@ body {
         gap: 10px;
     }
 
-    .cards .lastCard:hover {
+    .cards .lastCard.lastEffect {
         width: 90%;
     }
 
@@ -259,8 +260,8 @@ body {
         width: 300px;
         border-radius: 50%;
 
-        pointer-events:initial;
-        cursor:pointer;
+        pointer-events: initial;
+        cursor: pointer;
 
         overflow: hidden;
 
@@ -302,8 +303,8 @@ body {
         width: 250px;
 
         bottom: -10px;
-
-        transition: scale ease-out 300ms;
+        z-index: 1;
+        overflow: hidden;
     }
 
     .cards .card .btn:hover {
@@ -324,5 +325,21 @@ body {
         right: 70px;
     }
 
+    body .cards .card .btn::before {
+        background-color: var(--buttonTransitionColor);
+        content: '';
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
 
+
+    body .cards .card .btn:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
 }

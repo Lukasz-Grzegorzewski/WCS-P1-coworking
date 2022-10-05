@@ -28,6 +28,15 @@ fetch("../pages/header.html")
           cardDiv[i].classList.remove('card-effect');
         }
       }
+
+      const lastCard = document.querySelector('.lastCard');
+
+      if (scrollTop > (scrollTop + lastCard.getBoundingClientRect().top).toFixed() - clientHeight * 0.6) {
+        lastCard.classList.add('lastEffect');
+      } else {
+        lastCard.classList.remove('lastEffect');
+      }
+
     });
 
   });
