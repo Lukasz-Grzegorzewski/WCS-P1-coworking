@@ -113,10 +113,15 @@ i {
 
 button {
     border: none;
-    padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 15px;
+    width: 65%;
+    height: 30px;
+    letter-spacing: 6px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
 }
 
 
@@ -206,6 +211,30 @@ iframe {
         height: 70vh;
         padding: 35px 0 35px 0;
     }
+
+    button::before {
+        background-color: var(--color3);
+        content: '';
+        padding: 5px 10px;
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
+
+    .yellow-button::before {
+        background-color: var(--color5);
+    }
+
+    button:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+
 
 
 }

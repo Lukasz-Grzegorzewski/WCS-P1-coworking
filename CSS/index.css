@@ -3,17 +3,20 @@
     --cardOddBackground: rgba(251, 133, 0, .25);
     --cardEvenBackground: rgba(255, 183, 3, .4);
     --buttonBackgroundColor: rgb(251, 133, 0);
+    --buttonTransitionColor: #FFB703;
 
     --fontPrimary: 'Roboto Serif', serif;
     --fontSecondary: 'Roboto', sans-serif;
-} 
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body .desktop-title-wrapper, body .desktop-img-header {
+body .desktop-title-wrapper,
+body .desktop-img-header {
     display: none;
 }
 
@@ -104,7 +107,7 @@ body .cards .card .img-bienEtre {
     background-position: right 50% bottom 35%;
 }
 
-body .cards .card p { 
+body .cards .card p {
     width: 80%;
     min-height: 100px;
     margin-bottom: 20px;
@@ -142,7 +145,7 @@ body .cards .card .btn a {
     body .cards .lastCard .img-contact {
         display: none;
     }
-    
+
     body .desktop-img-header {
         background-image: url(../Images/index-img/hero-img.jpeg);
         background-size: cover;
@@ -151,7 +154,7 @@ body .cards .card .btn a {
         display: block;
         height: 40vh;
     }
-    
+
     body .desktop-title-wrapper {
         width: 90%;
         margin: 50px auto;
@@ -170,15 +173,15 @@ body .cards .card .btn a {
         width: 100px;
     }
 
-    
+
     body .cards {
         width: 100%;
-        
+
         display: flex;
         flex-direction: column;
         gap: 150px;
     }
-    
+
     body .cards .card {
         position: relative;
 
@@ -208,7 +211,7 @@ body .cards .card .btn a {
         width: 90%;
         gap: 10px;
     }
-    
+
     body .cards .card .img-container {
         position: absolute;
         top: calc(50% - 150px);
@@ -225,24 +228,24 @@ body .cards .card .btn a {
 
     body .cards .card:nth-of-type(even) .img-container {
         right: -200px;
-        
+
         outline: 10px solid rgba(255, 183, 3, .75);
         outline-offset: -10px;
-        
+
     }
-    
-    body .cards .lastCard { 
+
+    body .cards .lastCard {
         text-align: center;
     }
 
-    body .cards .card p { 
+    body .cards .card p {
         text-align: left;
     }
 
-    body .cards .lastCard p { 
+    body .cards .lastCard p {
         margin-bottom: 20px;
     }
-    
+
     body .cards .card .btn {
         position: absolute;
         margin: 0;
@@ -251,6 +254,8 @@ body .cards .card .btn a {
         width: 250px;
 
         bottom: -10px;
+        z-index: 1;
+        overflow: hidden;
     }
 
     body .cards .card-withImage:nth-of-type(odd) .btn {
@@ -265,5 +270,20 @@ body .cards .card .btn a {
         right: 70px;
     }
 
+    body .cards .card .btn::before {
+        background-color: var(--buttonTransitionColor);
+        content: '';
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
 
-}
+
+    body .cards .card .btn:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }

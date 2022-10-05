@@ -77,9 +77,9 @@ h1 {
 h2 {
     width: 70%;
     text-align: center;
-    font-weight: lighter;
+    font-weight: 1.5em;
     margin: 25px 0 25px 0;
-    padding-bottom: 1em;
+    padding-bottom: 0.8em;
     border-bottom: 1px solid black;
 }
 
@@ -90,8 +90,10 @@ h2 {
 
 button {
     border: none;
-    padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 15px;
+    width: 20%;
+    height: 30px;
+    letter-spacing: 6px;
     color: white;
     font-family: 'Roboto', sans-serif;
     background-color: var(--color2);
@@ -183,14 +185,10 @@ button {
         transform-origin: right;
         transition: transform .5s ease-in-out;
         z-index: -1;
-        border-radius: 20px;
-
-
+        border-radius: 15px;
     }
 
     button:hover::before {
         transform: scaleX(1);
         transform-origin: left;
-
-
     }
