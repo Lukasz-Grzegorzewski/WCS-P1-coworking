@@ -95,12 +95,8 @@ button {
     color: white;
     font-family: 'Roboto', sans-serif;
     background-color: var(--color2);
-<<<<<<< HEAD
     z-index: 1;
     overflow: hidden;
-=======
-    margin-bottom: 50px;
->>>>>>> 3e15a13a795a09facb6886f7a1d637e8beb03c99
 
 }
 
@@ -173,7 +169,6 @@ button {
 
 
     button {
-<<<<<<< HEAD
         margin: 6px 0 50px 50%;
     }
 
@@ -199,8 +194,3 @@ button {
 
 
     }
-=======
-        margin: 6px 0 50px 50%
-    }
-}
->>>>>>> 3e15a13a795a09facb6886f7a1d637e8beb03c99
