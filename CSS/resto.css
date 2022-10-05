@@ -23,6 +23,7 @@ body {
 }
 
 .section {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +97,7 @@ h2 {
 }
 
 
-ul {
+.bien-etre ul {
     margin: 0px auto 25px auto;
     padding-left: 0px;
     display: flex;
@@ -107,7 +108,7 @@ ul {
 }
 
 
-li {
+.bien-etre li {
     list-style: none;
     display: flex;
 }
@@ -145,7 +146,7 @@ i {
         background-repeat: no-repeat;
         border: 3px solid var(--color4);
         border-radius: 40px;
-        width: 100%%;
+        width: 100%;
         height: 150px;
         display: flex;
         align-items: center;
@@ -179,7 +180,7 @@ i {
         text-align: center;
     }
 
-    ul {
+    .bien-etre ul {
         width: 70%;
         margin-top: 1em;
     }
@@ -219,3 +220,4 @@ i {
         text-align: start;
         padding-bottom: 0.5em;
     }
+}
