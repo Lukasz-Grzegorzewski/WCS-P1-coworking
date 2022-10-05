@@ -14,7 +14,7 @@
 }
 
 form {
-    font-family: 'Roboto',sans-serif;
+    font-family: 'Roboto Serif';
     width: 50%;
     top: 50%;
     display: flex;
@@ -33,7 +33,7 @@ h1 {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Serif';
     background-color: var(--color6);
 
 }
@@ -50,7 +50,7 @@ input {
 }
 
 #Envoyer {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Serif';
     color: white;
     border: 1px solid #eee;
     border-radius: 20px;
@@ -74,7 +74,7 @@ input {
     }
 
     body {
-        background-color: white;
+        background-color: var(--color6);
 
     }
 
@@ -90,23 +90,24 @@ input {
     form {
         margin-top: 100px;
         margin-bottom: 100px;
-        background-color: rgba(251, 133, 0, 0.3);
+        background-color: white;
         border-radius: 15px;
-        height: 350px;
-        padding: 20px;
-        width: 40%;
-        box-shadow: 5px 5px 10px grey;
+        height: 450px;
+        padding: 20px 40px;
+        width: 60%;
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         gap: 5px;
 
     }
 
     h1 {
-        color: var(--color5);
+        font-family: 'Roboto Serif';
         font-weight: 50;
+        font-weight: lighter;
+        margin-bottom: 25px;
     }
 
     #Envoyer {
@@ -114,18 +115,33 @@ input {
         margin-left: 210px;
         margin-right: 20%;
         position: absolute;
-        top: 335px;
+        top: 435px;
         right: -20%;
-        border: 0 solid #eee;
+        border: 0 solid;
         border-radius: 20px;
         box-shadow: 5px 5px 5px rgb(186, 186, 186);
         text-shadow: none;
-        font-family: 'Roboto';
+        font-family: 'Roboto Serif';
         color: white;
-        background-color: var(--color5);
+        background-color: orange;
     }
 
-    label {
-        margin: 5px;
+    #name,
+    #email,
+    #message {
+        font-family: 'Roboto Serif';
+        border-bottom: 1px solid;
+    }
+
+    #name,
+    #email {
+        line-height: 25px;
+
+    }
+
+    textearea {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        min-height: 115px;
     }
 }
