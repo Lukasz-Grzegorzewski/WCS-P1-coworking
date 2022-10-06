@@ -231,6 +231,11 @@ iframe {
         padding: 35px 0 35px 0;
     }
 
+    .main-container ul {
+        gap: 2.0em;
+    }
+
+
     button::before {
         background-color: var(--color3);
         content: '';

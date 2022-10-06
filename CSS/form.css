@@ -56,10 +56,13 @@ input {
     border: 1px solid #eee;
     border-radius: 20px;
     text-shadow: none;
-    background-color: var(--color5);
+    background-color: var(--color4);
     width: 100%;
     margin-left: 0px;
     margin-top: 10px;
+    letter-spacing: 5px;
+    z-index: 1;
+    overflow: hidden;
 }
 
 
@@ -182,6 +185,24 @@ input {
         font-family: 'Roboto Serif';
         color: white;
         background-color: rgb(253, 177, 35);
+    }
+
+    #Envoyer::before {
+        background-color: var(--color5);
+        content: '';
+        padding: 5px 10px;
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
+
+    #Envoyer:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 
     #name,
