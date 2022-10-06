@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulaire</title>
+
     <link rel="stylesheet" href="../CSS/form.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,300&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/navBottom.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>Formulaire</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
@@ -41,7 +45,7 @@
             <div class="pop-container">
 
                 <h2> Merci ! </h2>
-                <p>Nous avons bien pris en compte votre message, nous reviendrons vers vous dans les plus brefs
+                <p><span id="namePopup"></span><span id="emailPopup"></span> <br> Nous avons bien pris en compte votre message, nous reviendrons vers vous dans les plus brefs
                     délais</p>
 
                 <button type="button" id="closeButton" onclick="closeForm()"> Fermer </button>
@@ -49,8 +53,10 @@
         </div>
     </div>
 
-    <footer></footer>
+    <div class="nav-bottom"></div>
 
+    <footer></footer>
+    
     <script src="../JS/form.js"></script>
     <script src="../JS/header.js"></script>
 </body>
