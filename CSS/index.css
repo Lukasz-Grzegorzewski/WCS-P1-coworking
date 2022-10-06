@@ -87,7 +87,7 @@ body {
 
 .cards .lastCard {
     justify-content: space-around;
-    scroll-snap-align: none;
+    scroll-snap-align: start;
     scroll-margin: 0;
 }
 
@@ -158,6 +158,51 @@ body {
     letter-spacing: 8px;
 }
 
+.nav-bottom{
+    width: 100%;
+    height: 50px;
+    padding-top: 5px;
+
+    background-color: white;
+    
+    position: fixed;
+    bottom: 0;
+    border-radius: 15px 15px 0 0;
+}
+
+.list-nav-bottom{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    height: 100%;
+
+}
+
+.list-nav-bottom .element {
+    font-size: 1.2rem;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.list-nav-bottom .element i {
+    color: #023047;
+}
+
+.list-nav-bottom .element.home {
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    margin-top: -20px;
+
+    box-shadow: 0 5px 10px rgba(94, 94, 94, .5) ;
+}
+
+.list-nav-bottom .element.home i {
+    font-size: 1.5rem;
+}
 /*=========================================== MEDIA Q /*===========================================*/
 @media screen and (min-width: 770px) {
     
@@ -341,5 +386,9 @@ body {
     body .cards .card .btn:hover::before {
         transform: scaleX(1);
         transform-origin: left;
+    }
+
+    .nav-bottom{
+        display: none;
     }
 }
