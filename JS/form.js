@@ -1,7 +1,18 @@
 fetch("../pages/header.html")
-    .then(response => {
-        return response.text()
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("header").innerHTML = data;
+  })
+  .then(() => {
+    const menuBurger = document.querySelector(".menu-burger");
+    const navLinks = document.querySelector(".nav-links")
+
+    menuBurger.addEventListener("click", () => {
+      navLinks.classList.toggle('menu-burger')
     })
+<<<<<<< HEAD
     .then(data => {
         document.querySelector("header").innerHTML = data;
     })
@@ -129,3 +140,14 @@ form.onsubmit = function (event) {
 
 const popup = document.getElementsByClassName(".popup"); */
 
+=======
+  });
+
+fetch("../pages/footer.html")
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("footer").innerHTML = data;
+  });
+>>>>>>> f1c42b21259092f768a261db1e5628f211570c8a

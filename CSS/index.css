@@ -3,6 +3,7 @@
     --cardOddBackground: rgba(251, 133, 0, .25);
     --cardEvenBackground: rgba(255, 183, 3, .4);
     --buttonBackgroundColor: rgb(251, 133, 0);
+    --buttonTransitionColor: #FFB703;
 
     --fontPrimary: 'Roboto Serif', serif;
     --fontSecondary: 'Roboto', sans-serif;
@@ -19,8 +20,8 @@ html {
     scroll-snap-type: y mandatory;
 }
 
-body .desktop-title-wrapper,
-body .desktop-img-header {
+.desktop-title-wrapper,
+.desktop-img-header {
     display: none;
 }
 
@@ -32,7 +33,7 @@ body {
     scroll-snap-align: start;
 }
 
-body .title-wrapper {
+.title-wrapper {
     height: 15vh;
     padding-bottom: 5px;
 
@@ -44,7 +45,7 @@ body .title-wrapper {
 
 }
 
-body .title-wrapper .title {
+.title-wrapper .title {
     font-family: var(--fontPrimary);
     font-size: 24px;
 
@@ -52,11 +53,11 @@ body .title-wrapper .title {
     letter-spacing: 8px;
 }
 
-body .title-wrapper .title p {
+.title-wrapper .title p {
     font-size: 14px;
 }
 
-body .cards {
+.cards {
     width: 100%;
     margin-bottom: 100px;
 
@@ -67,7 +68,7 @@ body .cards {
     gap: 50px;
 }
 
-body .cards .card {
+.cards .card {
     width: 90%;
     padding: 8%;
 
@@ -84,56 +85,65 @@ body .cards .card {
     gap: 30px;
 }
 
-body .cards .lastCard {
+.cards .lastCard {
     justify-content: space-around;
+    scroll-snap-align: none;
+    scroll-margin: 0;
 }
 
-body .cards .card h2 {
+.cards .card h2 {
     letter-spacing: 3px;
     text-align: center;
 }
 
-body .cards .card:nth-of-type(even) {
+
+.cards .card:nth-of-type(even) {
     background-color: var(--cardEvenBackground);
 }
 
-body .cards .card a {
+.cards .card a {
     width: 100%;
     pointer-events: none;
     cursor: default;
 }
 
-body .cards .card a .img-container {
+.cards .card a .img-container {
     width: 100%;
     border-radius: 50%;
     background-size: cover;
 }
 
-body .cards .card a .img-container::after {
+.cards .card a .img-container::after {
     content: '';
     padding-bottom: 90%;
     display: block;
 }
 
-body .cards .card a .img-coworking {
+.cards .card a .img-coworking {
     background-image: url(../Images/index-img/coworking-img.jpeg);
 }
 
-body .cards .card a .img-restauration {
+.cards .card a .img-restauration {
     background-image: url(../Images/index-img/restauration-img.jpg);
 }
 
-body .cards .card a .img-bienEtre {
+.cards .card a .img-bienEtre {
     background-image: url(../Images/index-img/bien-etre-img.jpg);
     background-position: right 50% bottom 35%;
 }
 
-body .cards .card p {
+.cards .card .p-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cards .card .p-wrapper p {
     word-spacing: 5px;
     text-align: center;
 }
 
-body .cards .card .btn {
+
+.cards .card .btn {
     border: none;
 
     width: 80%;
@@ -150,27 +160,26 @@ body .cards .card .btn {
 
 /*=========================================== MEDIA Q /*===========================================*/
 @media screen and (min-width: 770px) {
+    
+    html {
+        overflow-y: none;
+        scroll-snap-type: none;
+    }
 
-    body .title-wrapper {
+    .cards .lastCard .img-contact {
         display: none;
     }
 
-    body .cards .lastCard .img-contact {
-        display: none;
-    }
-
-    body .desktop-img-header {
+    .desktop-img-header {
         background-image: url(../Images/index-img/hero-img.jpeg);
         background-size: cover;
         background-position: right 50% bottom 35%;
 
         display: block;
         height: 40vh;
-
-        scroll-snap-align: start;
     }
 
-    body .desktop-title-wrapper {
+    .desktop-title-wrapper {
         width: 90%;
         margin: 50px auto;
         display: flex;
@@ -178,21 +187,18 @@ body .cards .card .btn {
         align-items: center;
         gap: 50px;
 
-        scroll-snap-align: start;
-
     }
 
-    body .desktop-title-wrapper .img-owners-wrapper {
-
+    .desktop-title-wrapper .img-owners-wrapper {
         display: flex;
     }
 
-    body .desktop-title-wrapper .img-owners-wrapper img {
+    .desktop-title-wrapper .img-owners-wrapper img {
         width: 100px;
     }
 
 
-    body .cards {
+    .cards {
         width: 100%;
 
         display: flex;
@@ -200,78 +206,96 @@ body .cards .card .btn {
         gap: 150px;
     }
 
-    body .cards .card {
+    .cards .card {
         position: relative;
         padding-top: 10px;
-        width: 60%;
-
+        width: 40%;
+        height: 250px;
         scroll-margin: 25px;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 30px;
+
+        transition: width ease-in-out .5s;
     }
 
-    body .cards .card-withImage:nth-of-type(odd) {
+    .cards .card.card-effect {
+        width: 60%;
+    }
+
+    .cards .card-withImage {
+        padding-bottom: 35px;
+    }
+
+    .cards .card-withImage:nth-of-type(odd) {
         align-self: flex-end;
         margin-right: 100px;
         padding-left: 110px;
     }
 
-    body .cards .card-withImage:nth-of-type(even) {
+    .cards .card-withImage:nth-of-type(even) {
         align-self: flex-start;
         margin-left: 100px;
         padding-right: 110px;
     }
 
-    body .cards .lastCard {
-        width: 90%;
+    .cards .card-withImage:nth-child(3) {
+        padding-top: 0;
+    }
+
+    .cards .lastCard {
+        width: 60%;
         gap: 10px;
     }
 
-    body .cards .card a .img-container {
+    .cards .lastCard.lastEffect {
+        width: 90%;
+    }
+
+    .cards .card a .img-container {
         position: absolute;
         top: calc(50% - 135px);
         width: 300px;
         border-radius: 50%;
 
-        pointer-events:initial;
-        cursor:pointer;
+        pointer-events: initial;
+        cursor: pointer;
 
         overflow: hidden;
 
         transition: scale ease-in-out 300ms;
     }
 
-    body .cards .card a .img-container:hover {
+    .cards .card a .img-container:hover {
         scale: 1.05;
     }
 
-    body .cards .card:nth-of-type(odd) a .img-container {
+    .cards .card:nth-of-type(odd) a .img-container {
         left: -200px;
 
         outline: 10px solid rgba(251, 133, 0, .75);
         outline-offset: -10px;
     }
 
-    body .cards .card:nth-of-type(even) a .img-container {
+    .cards .card:nth-of-type(even) a .img-container {
         right: -200px;
 
         outline: 10px solid rgba(255, 183, 3, .75);
         outline-offset: -10px;
     }
 
-    body .cards .lastCard {
+    .cards .lastCard {
         padding-top: 30px;
         text-align: center;
     }
 
-    body .cards .card p {
+    .cards .card .p-wrapper p {
         text-align: left;
     }
 
-    body .cards .card .btn {
+    .cards .card .btn {
         position: absolute;
         margin: 0;
 
@@ -279,27 +303,43 @@ body .cards .card .btn {
         width: 250px;
 
         bottom: -10px;
-
-        transition: scale ease-out 300ms;
+        z-index: 1;
+        overflow: hidden;
     }
 
-    body .cards .card .btn:hover {
+    .cards .card .btn:hover {
         scale: 1.05;
     }
 
 
 
-    body .cards .card-withImage:nth-of-type(odd) .btn {
+    .cards .card-withImage:nth-of-type(odd) .btn {
         right: 70px;
     }
 
-    body .cards .card-withImage:nth-of-type(even) .btn {
+    .cards .card-withImage:nth-of-type(even) .btn {
         left: 70px;
     }
 
-    body .cards .lastCard .btn {
+    .cards .lastCard .btn {
         right: 70px;
     }
 
+    body .cards .card .btn::before {
+        background-color: var(--buttonTransitionColor);
+        content: '';
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
 
+
+    body .cards .card .btn:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
 }
