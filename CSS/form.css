@@ -16,13 +16,11 @@
 form {
     font-family: 'Roboto Serif';
     width: 50%;
-    top: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 50px auto;
     gap: 2px;
-
 }
 
 
@@ -35,7 +33,6 @@ h1 {
 body {
     font-family: 'Roboto Serif';
     background-color: var(--color6);
-
 }
 
 
@@ -60,6 +57,53 @@ input {
     width: 100%;
     margin-left: 0px;
     margin-top: 10px;
+}
+
+
+.form-popup {
+    display: none;
+    position: fixed;
+    width: 330px;
+    margin: auto;
+    height: 200px;
+    background: #FFFFFF;
+    box-shadow: var(--shadow-color);
+    border-radius: 14px;
+    padding: 30px 20px;
+}
+
+.popup {
+    font-family: 'Roboto Serif';
+    width: 450px;
+    border-radius: 20px;
+    position: fixed;
+    top: 25%;
+    left: 60%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: var(--color3);
+    z-index: 100;
+}
+
+.pop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 20px;
+}
+
+#closeButton {
+    font-family: 'Roboto Serif';
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding: 6px;
+    border: 1px solid;
 }
 
 @media screen and (min-width:600px) {
@@ -100,10 +144,10 @@ input {
         flex-direction: column;
         justify-content: space-between;
         gap: 5px;
-
     }
 
     h1 {
+        color: var(--color3);
         font-family: 'Roboto Serif';
         font-weight: 50;
         font-weight: lighter;
@@ -123,7 +167,7 @@ input {
         text-shadow: none;
         font-family: 'Roboto Serif';
         color: white;
-        background-color: orange;
+        background-color: rgb(253, 177, 35);
     }
 
     #name,
@@ -131,17 +175,63 @@ input {
     #message {
         font-family: 'Roboto Serif';
         border-bottom: 1px solid;
+        color: var(--color3);
     }
 
     #name,
     #email {
         line-height: 25px;
-
     }
 
     textearea {
         padding-top: 13px;
         padding-bottom: 13px;
         min-height: 115px;
+    }
+
+    .form-popup {
+        display: none;
+        position: fixed;
+        width: 400px;
+        margin: auto;
+        height: 200px;
+        background: #FFFFFF;
+        box-shadow: var(--shadow-color);
+        border-radius: 14px;
+        padding: 30px 20px;
+    }
+
+    .popup {
+        font-family: 'Roboto Serif';
+        width: 450px;
+        border-radius: 20px;
+        position: fixed;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: var(--color3);
+    }
+
+
+    .pop-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background-color: white;
+        width: 100%;
+        justify-content: space-between;
+        border-radius: 20px;
+    }
+
+    #closeButton {
+        font-family: 'Roboto Serif';
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        padding: 6px;
+        border: 1px solid;
     }
 }
