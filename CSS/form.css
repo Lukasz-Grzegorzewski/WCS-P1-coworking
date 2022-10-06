@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Serif';
 }
 
 form {
@@ -46,12 +47,12 @@ input {
     outline: none;
 }
 
+
 #Envoyer {
     font-family: 'Roboto Serif';
     color: white;
     border: 1px solid #eee;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px #eee;
     text-shadow: none;
     background-color: var(--color5);
     width: 100%;
@@ -60,16 +61,27 @@ input {
 }
 
 
+@keyframes theAnimation {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 .form-popup {
     display: none;
     position: fixed;
     width: 330px;
     margin: auto;
     height: 200px;
-    background: #FFFFFF;
-    box-shadow: var(--shadow-color);
+    background: white;
     border-radius: 14px;
     padding: 30px 20px;
+    border: 1px solid var(--color3);
+    animation: theAnimation 3s ease 0s 1 normal forwards;
 }
 
 .popup {
