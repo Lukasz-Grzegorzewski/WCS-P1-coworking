@@ -21,3 +21,18 @@ fetch("../pages/footer.html")
   .then(data => {
     document.querySelector("footer").innerHTML = data;
   });
+
+
+  fetch("../pages/navBottom.html")
+  .then(response => response.text())
+  .then(data => document.querySelector(".nav-bottom").innerHTML = data)
+  .then(() => {
+
+    window.addEventListener('scroll', () => {
+      const { scrollTop, clientHeight } = document.documentElement;
+      const navBottom = document.querySelector('.nav-bottom');
+      console.log(scrollTop);
+      scrollTop > 51 ? navBottom.classList.add('active') : navBottom.classList.remove('active');
+
+    });
+  });

@@ -36,7 +36,7 @@ function openForm(e) {
   e.preventDefault();
 
   console.log(nameInput.value);
-  
+
   namePopup.innerHTML = `${nameInput.value} <br> ${emailInput.value} <br>`;
 
   nameInput.value = '';
@@ -45,10 +45,25 @@ function openForm(e) {
 
   popup.style.display = "block";
   form.style.opacity = "40%";
-  
+
 }
 
 function closeForm() {
   popup.style.display = "none";
   form.style.opacity = "initial";
 }
+
+
+fetch("../pages/navBottom.html")
+  .then(response => response.text())
+  .then(data => document.querySelector(".nav-bottom").innerHTML = data)
+  .then(() => {
+
+    window.addEventListener('scroll', () => {
+      const { scrollTop, clientHeight } = document.documentElement;
+      const navBottom = document.querySelector('.nav-bottom');
+      console.log(scrollTop);
+      scrollTop > 51 ? navBottom.classList.add('active') : navBottom.classList.remove('active');
+
+    });
+  });
