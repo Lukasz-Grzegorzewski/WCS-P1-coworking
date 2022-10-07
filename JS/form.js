@@ -86,7 +86,6 @@ fetch("../pages/navBottom.html")
     window.addEventListener('scroll', () => {
       const { scrollTop, clientHeight } = document.documentElement;
       const navBottom = document.querySelector('.nav-bottom');
-      console.log(scrollTop);
       scrollTop > 51 ? navBottom.classList.add('active') : navBottom.classList.remove('active');
 
     });
@@ -95,4 +94,42 @@ fetch("../pages/navBottom.html")
 
   fetch("../pages/ratingContainer.html")
   .then(response => response.text())
-  .then(data => document.querySelector(".rating-container-wrapper").innerHTML = data);
+  .then(data => document.querySelector(".rating-container-wrapper").innerHTML = data)
+  .then(() => {
+
+    const comments = document.querySelector('.comments');
+    const comment = document.querySelector('.comment');
+    const timeDate = document.querySelector('.timeDate');
+    const paragraph = document.querySelector('.paragraph');
+    const textareaInput = document.getElementById('textarea-input');
+    const buttonFeedback = document.getElementById('button-feedback');
+
+    console.log(timeDate.innerText, paragraph.innerText, textareaInput.value);
+
+    buttonFeedback.addEventListener('click', () => {
+      
+      const newComment = document.createElement('li');
+      const commentTime = document.createElement('div');
+      const commentParagr = document.createElement('p');
+      
+      newComment.classList.add('comment');
+      commentTime.classList.add('timeDate');
+      commentParagr.classList.add('paragraph');
+
+      const date = new Date();
+      commentTime.innerText = `${date.toLocaleDateString()} \n${date.toLocaleTimeString()} `;
+      commentParagr.innerText = textareaInput.value;
+      textareaInput.value = '';
+
+      comments.appendChild(newComment);
+      newComment.appendChild(commentTime);
+      newComment.appendChild(commentParagr);
+
+    });
+      
+    
+    
+
+
+
+  });

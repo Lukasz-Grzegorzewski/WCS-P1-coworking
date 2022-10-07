@@ -13,19 +13,25 @@
         <label for="rate-2" class="fas fa-star"></label>
         <input type="radio" name="rate" id="rate-1">
         <label for="rate-1" class="fas fa-star"></label>
-        <form action="#comments" class="rating-form">
+        <form action="#comments-wrapper" class="rating-form">
             <h3 class="rating-header-title"></h3>
             <div class="rating-textarea">
-                <textarea cols="30" placeholder="Comment Here"></textarea>
+                <textarea cols="30" id="textarea-input" placeholder="Comment Here"></textarea>
             </div>
             <div class="rating-btn">
-                <button type="submit">Post</button>
+                <button type="submit" id="button-feedback">Post</button>
             </div>
             
         </form>
     </div>
 </div>
     
-<section id="comments">
-
+<section id="comments-wrapper">
+    <h3 class="comments-main-title">Comments</h3>
+    <ul class="comments">
+            <li class="comment">
+                <div class="timeDate"></div>
+                <p class="paragraph"></p>
+            </li>
+    </ul>
 </section>
