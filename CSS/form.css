@@ -63,7 +63,6 @@ body {
     margin-left: 0px;
     margin-top: 10px;
     letter-spacing: 5px;
-    z-index: 1;
     overflow: hidden;
 }
 
@@ -190,6 +189,7 @@ body {
         font-family: 'Roboto Serif';
         color: white;
         background-color: rgb(253, 177, 35);
+        z-index: 1;
     }
 
     #Envoyer::before {
