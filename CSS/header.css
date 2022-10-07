@@ -7,8 +7,9 @@
 
 
 header {
-    height: 6em;
+    height: 100px;
     background-color: rgb(255, 255, 255);
+    z-index: -2;
 
 }  
 
@@ -58,6 +59,40 @@ hr {
 }
 
 
+/* Animation sur les li */
+
+.action-button:hover {
+    
+    transition: all 0.5s ease;
+   
+}
+
+.nav-links li {
+    position: relative;
+  }
+  
+  .nav-links li::before {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      width: 100%;
+      height: 2px;
+      border-radius: 4px;
+      background-color: #89898965;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+      
+    }
+  
+    .nav-links li:hover::before {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+
 @media screen and (max-width: 770px) {
     
 
@@ -76,6 +111,8 @@ hr {
         display: block;
         top: 30px;
     }
+
+/* Animation du menu burger */
 
     header .nav-links.menu-burger{
         top: 65px;
@@ -102,11 +139,12 @@ hr {
         display: flex;
         justify-content: center;
         align-items: center; 
-        z-index: 1;  
+        z-index: 1; 
+        transition: all 1s ease; 
     }
 
     .nav-links{
-        transition: all 1.5s ease;
+        transition: all .5s ease;
     }
 
     .nav-links.mobile-menu{
@@ -127,13 +165,19 @@ hr {
     
     hr {
         display: flex;
-        width: 150%;
         margin-top: 0.5em;
         border: 1px solid;
         color: rgba(0, 0, 0, 0.242);
+        padding-left: 100px;
+        padding-right: 100px;  
     }
 
+/* pour désativer l'animation de li */
+
+
+.nav-links li::before{
+    z-index: -1;
+    height: 20px;
     
-    
-    
+}
 }

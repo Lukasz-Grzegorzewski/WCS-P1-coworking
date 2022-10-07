@@ -26,11 +26,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
 }
 
-
 h1 {
+    display: none;
+
+
+}
+
+h2 {
     font-family: var(--roboto-serif);
     font-weight: 100;
 
@@ -42,6 +47,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     gap: 40px;
+
 }
 
 
@@ -69,7 +75,7 @@ h1 {
 }
 
 
-h2 {
+h3 {
     width: 70%;
     text-align: center;
     border-bottom: 2px solid var(--color3);
@@ -83,7 +89,7 @@ h2 {
     padding-left: 0px;
     display: flex;
     flex-direction: column;
-    gap: 0.6em;
+    gap: 2.3em;
     width: 90%;
 }
 
@@ -91,6 +97,7 @@ h2 {
 .main-container li {
     list-style: none;
     display: flex;
+
 }
 
 
@@ -113,10 +120,16 @@ i {
 
 button {
     border: none;
-    padding: 5px 10px;
-    border-radius: 20px;
+    border-radius: 15px;
+    width: 65%;
+    height: 30px;
+    letter-spacing: 5px;
     color: white;
     font-family: 'Roboto', sans-serif;
+    z-index: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
 }
 
 
@@ -127,6 +140,7 @@ button {
 
 .yellow-button {
     background-color: var(--color4);
+    min-height: 30px;
 }
 
 
@@ -136,18 +150,17 @@ button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 
 span {
-    padding: 0;
-    margin: 0;
+    margin: 1%
 }
 
 
 strong {
-    padding: 0;
-    margin: 0;
+    margin: 5%;
 }
 
 
@@ -161,7 +174,11 @@ strong {
 
 iframe {
     width: 90%;
+    border-radius: 3%;
 }
+
+
+
 
 
 
@@ -177,17 +194,26 @@ iframe {
     .calculator-img {
         background-image: url(../images/tarif-img/calculatrice-img.jpg);
         background-size: cover;
+        background-position: center;
         border: 3px solid #023047;
         border-radius: 50px;
         width: 80%;
-        height: 300px;
+        height: 150px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-
     h1 {
+        display: flex;
+        justify-content: center;
+        margin: 5%;
+        font-family: var(--roboto-serif);
+        font-weight: 100;
+
+    }
+
+    h2 {
         display: none,
     }
 
@@ -196,6 +222,7 @@ iframe {
         flex-direction: row;
         justify-content: center;
         height: auto;
+        gap: 10%;
     }
 
 
@@ -203,9 +230,46 @@ iframe {
         width: 30%;
         min-width: 300px;
         justify-content: space-between;
-        height: 70vh;
+        height: 60vh;
         padding: 35px 0 35px 0;
     }
+
+    .container .yellow {
+        max-height: 50vh;
+    }
+
+    .main-container ul {
+        gap: 0.9rem;
+    }
+
+
+    button::before {
+        background-color: var(--color3);
+        content: '';
+        padding: 5px 10px;
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
+
+    .yellow-button::before {
+        background-color: var(--color5);
+    }
+
+    button:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+
+    strong {
+        margin: 0;
+    }
+
+
 
 
 }

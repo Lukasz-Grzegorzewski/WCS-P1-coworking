@@ -5,43 +5,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulaire</title>
+
     <link rel="stylesheet" href="../CSS/form.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/navBottom.css">
+    <link rel="stylesheet" href="../CSS/ratingContainer.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../CSS/footer.css">
-    <link rel="stylesheet" href="/CSS/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <title>Formulaire</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
     <header></header>
     <div class="hero"></div>
 
-    <form>
+    <form class="form" onsubmit="openForm(event)">
 
         <h1>Contact</h1>
 
-        <label for="name">Nom</label>
-        <input type="text" name="name" id="name"> <br>
+        <input type="text" name="name" id="name" placeholder="Name" required> <br>
 
-        <label for="email">Mail</label>
-        <input type="email" name="email" id="email"> <br>
+        <input type="email" name="email" id="email" placeholder="Email" required> <br>
 
-        <label for="message">Message</label>
-        <textarea name="message" id="message" cols="22" rows="5"></textarea>
+        <textarea name="message" id="message" placeholder="Message" cols="22" rows="5" required></textarea>
 
-        <input type="submit" value="Envoyer" id="Envoyer">
-
+        <button type="submit" value="Envoyer" id="Envoyer"> Envoyer </button>
 
     </form>
-    
-    <footer></footer>
 
+    <div class="popup">
+
+        <div class="form-popup" id="popupForm">
+
+            <div class="pop-container">
+
+                <h2> Merci ! </h2>
+                <p><span id="namePopup"></span><span id="emailPopup"></span> <br> Nous avons bien pris en compte votre message, nous reviendrons vers vous dans les plus brefs
+                    délais</p>
+
+                <button type="button" id="closeButton" onclick="closeForm()"> Fermer </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="rating-container-wrapper"></div>
+
+    <div class="nav-bottom"></div>
+
+    <footer></footer>
+    
     <script src="../JS/form.js"></script>
-    <script src="/JS/header.js"></script>
+    <script src="../JS/header.js"></script>
 </body>
 
 </html>

@@ -33,7 +33,7 @@ body {
 .title {
     display: flex;
     align-items: center;
-    height: 20vh;
+    height: 15vh;
 }
 
 
@@ -47,6 +47,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15%;
+
 }
 
 
@@ -75,12 +77,11 @@ h2 {
 
 .restauration-img {
     background-image: url(../images/resto-img/restauration-img.jpg);
+    background-position: center;
     background-size: cover;
     border-radius: 20px;
     height: 200px;
     width: 100%;
-
-    margin-top: 25px;
 }
 
 .text-content {
@@ -94,6 +95,8 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
 }
 
 
@@ -124,13 +127,8 @@ i {
 
 @media screen and (min-width:700px) {
 
-    .title {
-        display: none;
-    }
 
-    h1 {
-        display: none;
-    }
+
 
     .restauration-container {
         display: flex;
@@ -141,9 +139,8 @@ i {
 
     .restauration-img {
         background-image: url(../images/resto-img/restauration-img.jpg);
-        background-size: 110%;
-        background-position: center;
-        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 60% 60%;
         border: 3px solid var(--color4);
         border-radius: 40px;
         width: 100%;
@@ -159,12 +156,13 @@ i {
         width: 50%;
         padding-bottom: 0.8em;
         border-bottom: 1px solid black;
+        margin-bottom: 10px;
     }
 
 
     .text-content {
-        width: 50%;
-        margin-top: 0.8em;
+        width: 45%;
+        margin-top: 0.4em;
     }
 
 
@@ -173,6 +171,7 @@ i {
         flex-direction: column;
         align-items: center;
         width: 70%;
+        margin: 50px 0 50px 0;
     }
 
     .bien-etre h2 {
@@ -190,19 +189,21 @@ i {
         background-image: url(../Images/resto-img/bouffe-img.jpg);
         background-size: cover;
         position: absolute;
-        top: 250px;
-        right: 10%;
-        width: 300px;
-        height: 300px;
+        top: 32%;
+        right: 8%;
+        width: 325px;
+        height: 325px;
         border: 10px solid rgba(255, 183, 3, 0.8);
         border-radius: 50%;
+        display: block;
     }
 
     .yellow-container {
-        width: 70%;
+        width: 60%;
+        min-width: 550px;
         background-color: rgba(255, 183, 3, 0.2);
-        height: auto;
-        margin: 115px;
+
+        margin-top: 15vh;
         padding-left: 5%;
         box-shadow: 5px 5px 8px 5px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
@@ -210,7 +211,7 @@ i {
     }
 
     .yellow-container .text-content {
-        width: 50%;
+        width: 46%;
         text-align: start;
 
     }
@@ -220,4 +221,6 @@ i {
         text-align: start;
         padding-bottom: 0.5em;
     }
+
+
 }

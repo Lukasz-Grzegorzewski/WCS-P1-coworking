@@ -1,0 +1,299 @@
+.rating-container {
+    margin: 100px auto 0;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    width: 400px;
+    height: 320px;
+
+    background-color: rgb(255, 255, 255);
+    padding: 20px 30px;
+    border-radius: 15px;
+}
+
+.rating-container .stars-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 20px
+}
+
+.rating-form {
+    position: absolute;
+    bottom: 10px;
+    gap: 10px;
+}
+
+.rating-container .rating-main-title {
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+
+.rating-container .stars-container input {
+    display: none;
+}
+
+.rating-container .stars-container label {
+    font-size: 1.5rem;
+    color: rgb(122, 122, 122);
+    float: right;
+    transition: all .2s ease;
+}
+
+.rating-container .stars-container input:not(:checked)~label:hover,
+.rating-container .stars-container input:not(:checked)~label:hover~label {
+    color: #fdb123;
+}
+
+.rating-container .stars-container input:checked~label {
+    color: #fdb123;
+}
+
+.rating-container .stars-container input#rate-5:checked~label {
+    color: #ffbe45;
+    text-shadow: 0 0 20px #ffa600;
+}
+
+.rating-container .stars-container input#rate-1:checked~.rating-form .rating-header-title:before {
+    content: "I hate it ! 😡";
+}
+
+.rating-container .stars-container input#rate-2:checked~.rating-form .rating-header-title:before {
+    content: "I don't like it ! 🥱";
+}
+
+.rating-container .stars-container input#rate-3:checked~.rating-form .rating-header-title:before {
+    content: "I like it ! ☺️";
+}
+
+.rating-container .stars-container input#rate-4:checked~.rating-form .rating-header-title:before {
+    content: "I love it ! 😁";
+}
+
+.rating-container .stars-container input#rate-5:checked~.rating-form .rating-header-title:before {
+    content: "It's awesome 😍!!!";
+}
+
+.rating-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+}
+
+.rating-container .rating-header-title {
+    font-weight: 500;
+    color: #ffa705;
+    margin: 5px 0 0px 0;
+}
+
+.rating-form .rating-textarea textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    border: none;
+    resize: none;
+    box-shadow: 0 0 7px rgba(49, 49, 49, .3);
+    border-radius: 15px;
+    padding: 10px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.rating-form .rating-btn {
+    height: 30px;
+    width: 100%;
+}
+
+.rating-form .rating-btn button {
+    border: none;
+    background-color: rgb(251, 133, 0);
+    ;
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
+
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fdb123;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+
+.rating-form .rating-btn button::before {
+    background-color: var(--color5);
+    content: '';
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.rating-form .rating-btn button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.rating-container-wrapper #comments-wrapper {
+    width: 80%;
+    margin: 50px auto;
+    padding: 10px 0 20px;
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+} 
+
+.rating-container-wrapper #comments-wrapper .comments-main-title {
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.rating-container-wrapper #comments-wrapper ul.comments {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color: rgb(232, 232, 232);
+    border-radius: 15px;
+    padding-top: 5px;
+}
+
+.rating-container-wrapper #comments-wrapper ul.comments .comment:nth-child(1) {
+    display: none;
+}
+
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment {
+    position: relative;
+    font-size: .8rem;
+    min-height: 50px;
+    border-radius: 15px;
+    padding: 15px 15px 5px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment .timeDate {
+    min-width: 80px;
+    border-bottom: 1px solid rgb(201, 201, 201);
+    border-right: 1px solid rgb(125, 125, 125);
+    padding-bottom: 10px;
+    
+} 
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment:last-child .timeDate {
+    border-bottom: none;
+} 
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment .paragraph {
+    width: 95%;
+    padding-left: 10px;
+}
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment .stars {
+    position: absolute;
+    left: 8px;
+    top: -1px;
+}
+
+
+
+@media screen and (max-width: 770px) {
+
+    .rating-container {
+        margin: 100px auto 0;
+
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        width: 200px;
+        height: 210px;
+
+        background-color: rgb(255, 255, 255);
+        padding: 20px 30px;
+        border-radius: 15px;
+    }
+
+    .rating-container .rating-main-title {
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    .rating-container .stars-container {
+        gap: 10px
+    }
+
+    .rating-container .rating-main-title {
+        font-size: 1rem;
+        font-weight: 100;
+    }
+
+    .rating-container .stars-container input~.rating-form .rating-header-title:before {
+        font-size: .8rem;
+    }
+
+
+    .rating-form .rating-textarea {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rating-form .rating-textarea textarea {
+        height: 53px;
+        width: 90%;
+        font-size: .8rem;
+    }
+
+    .rating-form .rating-btn {
+        height: 20px;
+        width: 90%;
+    }
+
+    .rating-form .rating-btn button {
+        background-color: #fdb123;
+        font-size: .8rem;
+    }
+
+    
+    .rating-container-wrapper #comments-wrapper .comments-main-title {
+        font-size: .8rem;
+    }
+
+
+    .rating-container-wrapper #comments-wrapper ul.comments li.comment .paragraph {
+        width: 120px;
+    }
+
+}
