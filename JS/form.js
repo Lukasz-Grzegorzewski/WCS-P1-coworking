@@ -136,23 +136,23 @@ fetch("../pages/ratingContainer.html")
 
           switch (i) {
             case 0:
-              starsComment.innerText = `⭐⭐⭐⭐⭐`;
+              starsComment.innerText = `😍 ⭐⭐⭐⭐⭐`;
               break;
 
             case 1:
-              starsComment.innerText = `⭐⭐⭐⭐`;
+              starsComment.innerText = `😁 ⭐⭐⭐⭐`;
               break;
 
             case 2:
-              starsComment.innerText = `⭐⭐⭐`;
+              starsComment.innerText = `☺️ ⭐⭐⭐`;
               break;
 
             case 3:
-              starsComment.innerText = `⭐⭐`;
+              starsComment.innerText = `🥱 ⭐⭐`;
               break;
 
             case 4:
-              starsComment.innerText = `⭐`;
+              starsComment.innerText = `😡 ⭐`;
               break;
 
             default:

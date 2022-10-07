@@ -41,6 +41,7 @@ body {
 .bureauind-container {
     display: flex;
     width: 90%;
+    margin-bottom: 7%;
 }
 
 
@@ -48,7 +49,7 @@ body {
     background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
     background-size: cover;
     border-radius: 20px;
-    height: 200px;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -58,6 +59,8 @@ body {
 .reunion-container {
     display: flex;
     width: 90%;
+    margin-bottom: 7%;
+    margin-top: 7%;
 }
 
 
@@ -66,18 +69,19 @@ body {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    height: 200px;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 50px;
 }
 
 h2 {
     width: 70%;
     text-align: center;
     font-weight: 1.5em;
-    margin: 25px 0 25px 0;
+    margin: 15% 0 25px 0;
     padding-bottom: 0.8em;
     border-bottom: 1px solid black;
 }
@@ -90,7 +94,7 @@ h2 {
 button {
     border: none;
     border-radius: 15px;
-    width: 20%;
+    width: 80%;
     height: 30px;
     letter-spacing: 6px;
     color: white;
@@ -118,13 +122,13 @@ button {
 
     .bureauindiv-img {
         background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
-        background-size: 110%;
+        background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
         border: 3px solid #023047;
         border-radius: 50px;
         width: 100%;
-        height: 250px;
+        height: 220px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -139,30 +143,35 @@ button {
 
     .reunion-img {
         background-image: url(../images/coworking-img/reunion-img.jpeg);
-        background-size: 105%;
-        background-position: center;
+        background-size: 100%;
+        background-position: 40% 53%;
         background-repeat: no-repeat;
         border: 3px solid #023047;
         border-radius: 50px;
         width: 100%;
-        height: 250px;
+        height: 220px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 0;
     }
 
     h2 {
         text-align: start;
         width: 60%;
+        max-width: 700px;
+        margin-top: 25px;
     }
 
     .text-content {
         width: 60%;
+        max-width: 700px;
     }
 
 
     button {
         margin: 6px 0 50px 50%;
+        width: 30%;
     }
 
 

@@ -58,10 +58,12 @@ body {
     border: 1px solid #eee;
     border-radius: 20px;
     text-shadow: none;
-    background-color: var(--color5);
+    background-color: var(--color4);
     width: 100%;
     margin-left: 0px;
     margin-top: 10px;
+    letter-spacing: 5px;
+    overflow: hidden;
 }
 
 
@@ -174,10 +176,11 @@ body {
 
     #Envoyer {
         width: 180px;
+        height: 30px;
         margin-left: 210px;
         margin-right: 20%;
         position: absolute;
-        top: 435px;
+        top: 425px;
         right: -20%;
         border: 0 solid;
         border-radius: 20px;
@@ -186,6 +189,25 @@ body {
         font-family: 'Roboto Serif';
         color: white;
         background-color: rgb(253, 177, 35);
+        z-index: 1;
+    }
+
+    #Envoyer::before {
+        background-color: var(--color5);
+        content: '';
+        padding: 5px 10px;
+        inset: 0;
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform .5s ease-in-out;
+        z-index: -1;
+        border-radius: 15px;
+    }
+
+    #Envoyer:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
     }
 
     #name,
@@ -206,7 +228,7 @@ body {
         padding-bottom: 13px;
         min-height: 115px;
     }
-  
+
     .popup {
         font-family: 'Roboto Serif';
         width: 450px;
@@ -225,7 +247,7 @@ body {
         position: fixed;
         width: 400px;
         margin: auto;
- 
+
         background: #FFFFFF;
         box-shadow: var(--shadow-color);
         border-radius: 14px;

@@ -113,7 +113,8 @@
 
 .rating-form .rating-btn button {
     border: none;
-    background-color: rgb(251, 133, 0);;
+    background-color: rgb(251, 133, 0);
+    ;
 
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .25);
 
@@ -125,6 +126,26 @@
     font-size: 1.1rem;
     letter-spacing: 3px;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+
+}
+
+.rating-form .rating-btn button::before {
+    background-color: var(--color5);
+    content: '';
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .5s ease-in-out;
+    z-index: -1;
+    border-radius: 15px;
+}
+
+.rating-form .rating-btn button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .rating-container-wrapper #comments-wrapper {
@@ -199,7 +220,7 @@
 
 .rating-container-wrapper #comments-wrapper ul.comments li.comment .stars {
     position: absolute;
-    left: 16px;
+    left: 8px;
     top: -1px;
 }
 
@@ -233,7 +254,7 @@
     .rating-container .stars-container {
         gap: 10px
     }
-    
+
     .rating-container .rating-main-title {
         font-size: 1rem;
         font-weight: 100;
@@ -244,7 +265,7 @@
     }
 
 
-    .rating-form .rating-textarea{
+    .rating-form .rating-textarea {
         display: flex;
         justify-content: center;
     }
@@ -259,9 +280,9 @@
         height: 20px;
         width: 90%;
     }
-    
+
     .rating-form .rating-btn button {
-        background-color: #FB8500;
+        background-color: #fdb123;
         font-size: .8rem;
     }
 
