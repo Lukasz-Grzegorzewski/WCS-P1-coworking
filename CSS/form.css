@@ -16,7 +16,7 @@
 
 
 
-form {
+.form {
     font-family: 'Roboto Serif';
     width: 50%;
     opacity: 100%;
@@ -41,7 +41,7 @@ body {
 }
 
 
-input {
+.form input {
     border: none;
     outline: none
 }
@@ -149,7 +149,7 @@ input {
     }
 
 
-    form {
+    .form {
         margin-top: 100px;
         margin-bottom: 100px;
         background-color: white;
@@ -201,7 +201,7 @@ input {
         line-height: 25px;
     }
 
-    textarea {
+    .form textarea {
         padding-top: 13px;
         padding-bottom: 13px;
         min-height: 115px;

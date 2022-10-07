@@ -15,12 +15,8 @@ fetch("../pages/header.html")
   });
 
 fetch("../pages/footer.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("footer").innerHTML = data;
-  });
+  .then(response => response.text())
+  .then(data => document.querySelector("footer").innerHTML = data);
 
 
 const popup = document.getElementById("popupForm");
@@ -67,3 +63,8 @@ fetch("../pages/navBottom.html")
 
     });
   });
+
+
+  fetch("../pages/ratingContainer.html")
+  .then(response => response.text())
+  .then(data => document.querySelector(".rating-container-wrapper").innerHTML = data);
