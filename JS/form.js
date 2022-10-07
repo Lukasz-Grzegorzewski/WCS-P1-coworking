@@ -161,18 +161,11 @@ fetch("../pages/ratingContainer.html")
               break;
           }
 
-
           newComment.appendChild(starsComment);
-          console.log(starsGiven[i]);
+
         }
       }
 
-
     });
-
-
-
-
-
 
   });

@@ -31,7 +31,6 @@ fetch("../pages/footer.html")
     window.addEventListener('scroll', () => {
       const { scrollTop, clientHeight } = document.documentElement;
       const navBottom = document.querySelector('.nav-bottom');
-      console.log(scrollTop);
       scrollTop > 51 ? navBottom.classList.add('active') : navBottom.classList.remove('active');
 
     });
