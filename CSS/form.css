@@ -177,10 +177,11 @@ body {
 
     #Envoyer {
         width: 180px;
+        height: 30px;
         margin-left: 210px;
         margin-right: 20%;
         position: absolute;
-        top: 435px;
+        top: 425px;
         right: -20%;
         border: 0 solid;
         border-radius: 20px;
@@ -227,7 +228,7 @@ body {
         padding-bottom: 13px;
         min-height: 115px;
     }
-  
+
     .popup {
         font-family: 'Roboto Serif';
         width: 450px;
@@ -246,7 +247,7 @@ body {
         position: fixed;
         width: 400px;
         margin: auto;
- 
+
         background: #FFFFFF;
         box-shadow: var(--shadow-color);
         border-radius: 14px;

@@ -156,11 +156,13 @@ button {
     h2 {
         text-align: start;
         width: 60%;
+        max-width: 700px;
         margin-top: 25px;
     }
 
     .text-content {
         width: 60%;
+        max-width: 700px;
     }
 
 
