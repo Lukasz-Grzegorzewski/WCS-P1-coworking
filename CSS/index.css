@@ -160,7 +160,7 @@ body {
 
 /*=========================================== MEDIA Q /*===========================================*/
 @media screen and (min-width: 770px) {
-    
+
     html {
         overflow-y: none;
         scroll-snap-type: none;
@@ -343,7 +343,7 @@ body {
         transform-origin: left;
     }
 
-    .nav-bottom{
+    .nav-bottom {
         display: none;
     }
 }
