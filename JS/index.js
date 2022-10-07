@@ -1,10 +1,6 @@
 fetch("../pages/header.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("header").innerHTML = data;
-  })
+  .then(response => response.text())
+  .then(data => document.querySelector("header").innerHTML = data)
   .then(() => {
     //-------------------BURGER CLICK-------------------
     const menuBurger = document.querySelector(".menu-burger");
@@ -19,7 +15,7 @@ fetch("../pages/header.html")
     const cardDiv = document.querySelectorAll('.card');
     window.addEventListener('scroll', () => {
       const { scrollTop, clientHeight } = document.documentElement;
-      
+
       for (let i = 0; i < cardDiv.length; i++) {
 
         if (scrollTop > (scrollTop + cardDiv[i].getBoundingClientRect().top).toFixed() - clientHeight * 0.7) {
@@ -42,10 +38,20 @@ fetch("../pages/header.html")
   });
 
 fetch("../pages/footer.html")
-  .then(response => {
-    return response.text()
-  })
-  .then(data => {
-    document.querySelector("footer").innerHTML = data;
-  });
+  .then(response => response.text())
+  .then(data => document.querySelector("footer").innerHTML = data);
 
+
+fetch("../pages/navBottom.html")
+  .then(response => response.text())
+  .then(data => document.querySelector(".nav-bottom").innerHTML = data)
+  .then(() => {
+
+    window.addEventListener('scroll', () => {
+      const { scrollTop, clientHeight } = document.documentElement;
+      const navBottom = document.querySelector('.nav-bottom');
+      console.log(scrollTop);
+      scrollTop > 51 ? navBottom.classList.add('active') : navBottom.classList.remove('active');
+
+    });
+  });

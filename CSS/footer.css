@@ -1,10 +1,11 @@
 footer {
-    position: relative;
-    padding: 20px 0;
-    background-color: white;
     width: 100%;
+    margin-top: 180px;
+    padding: 20px 0;
+    
+    background-color: white;
 
-
+    position: relative;
 }
 
 footer .followUs {
@@ -13,6 +14,10 @@ footer .followUs {
     display: flex;
     justify-content: center;
     gap: 30px
+}
+
+footer .followUs a i.fa-brands{
+    font-size: 1.5rem;
 }
 
 footer .followUs a .fa-facebook {
@@ -53,7 +58,7 @@ footer .footer-contact .footer-element {
 }
 
 footer .footer-contact .footer-element .title-footer {
-    font-size: .7rem;
+    font-size: .9rem;
 }
 
 footer .footer-contact .footer-element ul {
@@ -63,7 +68,7 @@ footer .footer-contact .footer-element ul {
 footer .footer-contact .footer-element ul li {
     list-style: none;
     margin: 3px;
-    font-size: 8px;
+    font-size: .7rem;
 }
 
 footer .copyrights {
@@ -77,11 +82,11 @@ footer .copyrights {
 
 /*=========================================== MEDIA Q /*===========================================*/
 @media screen and (min-width: 770px) {
-    footer .followUs a {
+    footer .followUs a i {
         transition: scale ease-in-out 200ms;
     }
 
-    footer .followUs a:hover {
+    footer .followUs a:hover i {
         scale: 1.5;
     }
 }

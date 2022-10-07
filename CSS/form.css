@@ -19,6 +19,7 @@
 form {
     font-family: 'Roboto Serif';
     width: 50%;
+    opacity: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,6 +37,7 @@ h1 {
 body {
     font-family: 'Roboto Serif';
     background-color: var(--color6);
+
 }
 
 
@@ -66,10 +68,12 @@ input {
 @keyframes theAnimation {
     0% {
         transform: scale(0);
+        opacity: 0;
     }
 
     100% {
         transform: scale(1);
+        opacity: 100%;
     }
 }
 
@@ -78,12 +82,11 @@ input {
     position: fixed;
     width: 330px;
     margin: auto;
-    height: 200px;
     background: white;
     border-radius: 14px;
     padding: 30px 20px;
     border: 1px solid var(--color3);
-    animation: theAnimation 3s ease 0s 1 normal forwards;
+    animation: theAnimation 1.5s ease-in-out 0s 1 normal forwards;
 }
 
 .popup {
@@ -120,6 +123,7 @@ input {
     border: 1px solid;
 }
 
+
 @media screen and (min-width:600px) {
 
     :root {
@@ -151,7 +155,7 @@ input {
         background-color: white;
         border-radius: 15px;
         height: 450px;
-        padding: 20px 40px;
+        padding: 50px 70px 100px;
         width: 60%;
         position: relative;
         display: flex;
@@ -188,7 +192,7 @@ input {
     #email,
     #message {
         font-family: 'Roboto Serif';
-        border-bottom: 1px solid;
+        border-bottom: 1px solid rgb(128, 128, 128);
         color: var(--color3);
     }
 
@@ -197,24 +201,12 @@ input {
         line-height: 25px;
     }
 
-    textearea {
+    textarea {
         padding-top: 13px;
         padding-bottom: 13px;
         min-height: 115px;
     }
-
-    .form-popup {
-        display: none;
-        position: fixed;
-        width: 400px;
-        margin: auto;
-        height: 200px;
-        background: #FFFFFF;
-        box-shadow: var(--shadow-color);
-        border-radius: 14px;
-        padding: 30px 20px;
-    }
-
+  
     .popup {
         font-family: 'Roboto Serif';
         width: 450px;
@@ -227,6 +219,19 @@ input {
         padding: 0 30px 30px;
         color: var(--color3);
     }
+
+    .form-popup {
+        display: none;
+        position: fixed;
+        width: 400px;
+        margin: auto;
+ 
+        background: #FFFFFF;
+        box-shadow: var(--shadow-color);
+        border-radius: 14px;
+        padding: 30px 20px;
+    }
+
 
 
     .pop-container {

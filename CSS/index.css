@@ -87,7 +87,7 @@ body {
 
 .cards .lastCard {
     justify-content: space-around;
-    scroll-snap-align: none;
+    scroll-snap-align: start;
     scroll-margin: 0;
 }
 
@@ -341,5 +341,9 @@ body {
     body .cards .card .btn:hover::before {
         transform: scaleX(1);
         transform-origin: left;
+    }
+
+    .nav-bottom{
+        display: none;
     }
 }
