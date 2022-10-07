@@ -157,6 +157,7 @@
 
     background-color: rgb(232, 232, 232);
     border-radius: 15px;
+    padding-top: 5px;
 }
 
 .rating-container-wrapper #comments-wrapper ul.comments .comment:nth-child(1) {
@@ -165,10 +166,11 @@
 
 
 .rating-container-wrapper #comments-wrapper ul.comments li.comment {
+    position: relative;
     font-size: .8rem;
-    height: 50px;
+    min-height: 50px;
     border-radius: 15px;
-    padding: 0 15px;
+    padding: 15px 15px 5px;
     overflow: hidden;
 
     display: flex;
@@ -179,12 +181,28 @@
 }
 
 .rating-container-wrapper #comments-wrapper ul.comments li.comment .timeDate {
+    min-width: 80px;
+    border-bottom: 1px solid rgb(201, 201, 201);
     border-right: 1px solid rgb(125, 125, 125);
-    width: 80px;
+    padding-bottom: 10px;
+    
+} 
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment:last-child .timeDate {
+    border-bottom: none;
 } 
 
 .rating-container-wrapper #comments-wrapper ul.comments li.comment .paragraph {
-} 
+    width: 95%;
+    padding-left: 10px;
+}
+
+.rating-container-wrapper #comments-wrapper ul.comments li.comment .stars {
+    position: absolute;
+    left: 16px;
+    top: -1px;
+}
+
 
 
 @media screen and (max-width: 770px) {
@@ -245,6 +263,16 @@
     .rating-form .rating-btn button {
         background-color: #FB8500;
         font-size: .8rem;
+    }
+
+    
+    .rating-container-wrapper #comments-wrapper .comments-main-title {
+        font-size: .8rem;
+    }
+
+
+    .rating-container-wrapper #comments-wrapper ul.comments li.comment .paragraph {
+        width: 120px;
     }
 
 }
