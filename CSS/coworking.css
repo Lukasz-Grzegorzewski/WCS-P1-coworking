@@ -46,7 +46,7 @@ body {
 
 
 .bureauindiv-img {
-    background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
+    background-image: url(../Images/coworking-img/bureauindiv-img.jpeg);
     background-size: cover;
     border-radius: 20px;
     height: 150px;
@@ -65,7 +65,7 @@ body {
 
 
 .reunion-img {
-    background-image: url(../images/coworking-img/reunion-img.jpeg);
+    background-image: url(../Images/coworking-img/reunion-img.jpeg);
     background-size: cover;
     background-position: center;
     border-radius: 20px;
@@ -121,7 +121,7 @@ button {
 
 
     .bureauindiv-img {
-        background-image: url(../images/coworking-img/bureauindiv-img.jpeg);
+        background-image: url(../Images/coworking-img/bureauindiv-img.jpeg);
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -142,7 +142,7 @@ button {
 
 
     .reunion-img {
-        background-image: url(../images/coworking-img/reunion-img.jpeg);
+        background-image: url(../Images/coworking-img/reunion-img.jpeg);
         background-size: 100%;
         background-position: 40% 53%;
         background-repeat: no-repeat;
